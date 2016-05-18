@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="footerView" destination="Ncm-9F-5hI" id="Cnc-qM-k3t"/>
                 <outlet property="headerView" destination="lQf-ca-yeU" id="0qX-8Z-R8J"/>
+                <outlet property="keyholeButton" destination="VBF-sn-p38" id="4Bg-OF-7c4"/>
                 <outlet property="titleLabel" destination="Pl6-dX-ePg" id="D4b-T4-XLt"/>
             </connections>
         </placeholder>
@@ -43,6 +44,14 @@
                         <constraint firstAttribute="height" constant="40" id="FtJ-rc-qLE"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-sn-p38">
+                    <rect key="frame" x="8" y="88" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="RDW-mE-aqg"/>
+                        <constraint firstAttribute="width" constant="50" id="euo-ZG-XNU"/>
+                    </constraints>
+                    <state key="normal" image="keyhole"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -52,8 +61,13 @@
                 <constraint firstAttribute="bottom" secondItem="Ncm-9F-5hI" secondAttribute="bottom" id="Ij8-eJ-I3p"/>
                 <constraint firstAttribute="trailing" secondItem="Ncm-9F-5hI" secondAttribute="trailing" id="QQe-Rs-JH7"/>
                 <constraint firstItem="lQf-ca-yeU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="SNv-SJ-icY"/>
+                <constraint firstItem="VBF-sn-p38" firstAttribute="top" secondItem="lQf-ca-yeU" secondAttribute="bottom" constant="8" id="rkg-cd-ldI"/>
+                <constraint firstItem="VBF-sn-p38" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="xML-U5-IoZ"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
         </view>
     </objects>
+    <resources>
+        <image name="keyhole" width="186" height="186"/>
+    </resources>
 </document>

@@ -20,18 +20,32 @@ class BackgroundView: NibDesignable {
 
     @IBInspectable var title:String? {
         didSet {
-            self.titleLabel!.text = title
+            self.titleLabel!.text = title?.uppercaseString
         }
     }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var footerView: UIView!
+    @IBOutlet weak var keyholeButton: UIButton!
     
     @IBInspectable var footerVisible:Bool = true {
         didSet {
             self.footerView!.hidden = !self.footerVisible
         }
     }
+    
+    @IBInspectable var keyholeButtonEnabled:Bool = true {
+        didSet {
+            self.keyholeButton!.userInteractionEnabled = self.keyholeButtonEnabled
+        }
+    }
+    
+    @IBInspectable var keyholeButtonVisible:Bool = true {
+        didSet {
+            self.keyholeButton!.hidden = !self.keyholeButtonVisible
+        }
+    }
+    
     
     override func prepareForInterfaceBuilder() {
         if self.title == nil {

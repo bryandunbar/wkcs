@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XgL-mc-GDH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,23 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="keyhole" translatesAutoresizingMaskIntoConstraints="NO" id="75X-Qe-2Qe">
-                                <rect key="frame" x="20" y="94" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Q32-js-dVQ"/>
-                                    <constraint firstAttribute="width" constant="75" id="cyY-Yf-XiY"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-pC-xq7">
-                                <rect key="frame" x="425" y="341" width="146" height="21"/>
+                                <rect key="frame" x="405" y="355" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHO KILLED C. SERVICE?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFM-1d-PP3">
-                                <rect key="frame" x="343" y="354" width="393" height="160"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
-                                <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Store ID" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m7f-Lo-esn">
@@ -53,6 +40,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="moQ-Pm-hkn" kind="show" id="7Wy-XC-1lv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-kW-064">
                                 <rect key="frame" x="202" y="809" width="421" height="68"/>
@@ -74,18 +64,27 @@
                                     <constraint firstAttribute="height" constant="52" id="XAY-pG-j1T"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHO KILLED C. SERVICE?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFM-1d-PP3">
+                                <rect key="frame" x="359" y="377" width="393" height="160"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbprint" translatesAutoresizingMaskIntoConstraints="NO" id="9JM-0x-xqb">
+                                <rect key="frame" x="491" y="178" width="277" height="214"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="75X-Qe-2Qe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2dw-6d-Bha"/>
-                            <constraint firstItem="75X-Qe-2Qe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="DJk-5N-4oy"/>
                             <constraint firstItem="wW2-3N-KeR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Hzb-ug-XbR"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wW2-3N-KeR" secondAttribute="bottom" constant="30" id="ZwR-Uv-B7a"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="footerVisible" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyholeButtonEnabled" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <navigationItem key="navigationItem" id="nxe-ob-JLR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backgroundView" destination="8bC-Xf-vdC" id="xMf-f0-Wrd"/>
@@ -93,11 +92,138 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1364" y="485"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="z68-dl-SQC">
+            <objects>
+                <viewController id="moQ-Pm-hkn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vIl-kh-bWG"/>
+                        <viewControllerLayoutGuide type="bottom" id="cZz-Lk-GBo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nGP-Vk-HLc" customClass="BackgroundView" customModule="WKCS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHO KILLED C. SERVICE?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib4-HB-3Qj">
+                                <rect key="frame" x="358" y="375" width="393" height="160"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKJ-1r-Elx">
+                                <rect key="frame" x="202" y="809" width="421" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal" title="BEGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8cD-G7-4PP" kind="show" id="0GG-IK-yU8"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lc" translatesAutoresizingMaskIntoConstraints="NO" id="qP1-Wa-Mde">
+                                <rect key="frame" x="20" y="942" width="240" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5cS-VY-Rgr"/>
+                                    <constraint firstAttribute="height" constant="52" id="ubl-Ep-kFO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow the prompts trhoughout the app as your team tries to find out what happened to C. Service" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBm-4Y-30o">
+                                <rect key="frame" x="348" y="480" width="404" height="205"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0m-l6-P8U">
+                                <rect key="frame" x="413" y="361" width="146" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumbprint" translatesAutoresizingMaskIntoConstraints="NO" id="LyR-Pp-Qo6">
+                                <rect key="frame" x="491" y="183" width="277" height="214"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qP1-Wa-Mde" firstAttribute="leading" secondItem="nGP-Vk-HLc" secondAttribute="leadingMargin" id="ToL-Qu-Y96"/>
+                            <constraint firstItem="cZz-Lk-GBo" firstAttribute="top" secondItem="qP1-Wa-Mde" secondAttribute="bottom" constant="30" id="jBE-ky-O1J"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="footerVisible" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyholeButtonEnabled" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kiY-M7-YZd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2176" y="485"/>
+        </scene>
+        <!--Answer The Call View Controller-->
+        <scene sceneID="Nih-23-FZC">
+            <objects>
+                <viewController id="8cD-G7-4PP" customClass="AnswerTheCallViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OLa-ZA-zNL"/>
+                        <viewControllerLayoutGuide type="bottom" id="jOP-3I-TT7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1pw-Zf-6qu" customClass="BackgroundView" customModule="WKCS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aue-ob-h5c">
+                                <rect key="frame" x="169" y="666" width="421" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal" title="Answer the Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-dh-NC5">
+                                <rect key="frame" x="169" y="759" width="421" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <state key="normal" title="Proceed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="telephone booth" translatesAutoresizingMaskIntoConstraints="NO" id="8iA-Zy-Flz">
+                                <rect key="frame" x="197" y="133" width="365" height="557"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Who Killed C. Service?"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xW-Rf-Kqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3031" y="485"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Hrf-77-yRi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XgL-mc-GDH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xNt-6l-VML">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BAi-G5-4bL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEQ-SI-Nwm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="552" y="485"/>
         </scene>
     </scenes>
     <resources>
-        <image name="keyhole" width="186" height="186"/>
         <image name="lc" width="264" height="32"/>
+        <image name="telephone booth" width="1800" height="1800"/>
+        <image name="thumbprint" width="2973" height="2973"/>
     </resources>
 </document>
