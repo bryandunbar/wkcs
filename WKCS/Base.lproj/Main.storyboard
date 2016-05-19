@@ -179,9 +179,12 @@
                                 <state key="normal" title="Answer the Call">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="answerCallTapped:" destination="8cD-G7-4PP" eventType="touchUpInside" id="XPk-2P-YdJ"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-dh-NC5">
-                                <rect key="frame" x="169" y="759" width="421" height="68"/>
+                                <rect key="frame" x="169" y="758" width="421" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <state key="normal" title="Proceed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -197,6 +200,10 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="answerCallButton" destination="aue-ob-h5c" id="fYU-YR-e3K"/>
+                        <outlet property="proceedButton" destination="YGF-dh-NC5" id="m0g-wA-xgV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1xW-Rf-Kqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
