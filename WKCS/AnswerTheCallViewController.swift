@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class AnswerTheCallViewController: UIViewController, AVAudioPlayerDelegate {
+class AnswerTheCallViewController: BaseViewController, AVAudioPlayerDelegate {
 
     
     var player:AVAudioPlayer?
@@ -56,13 +56,13 @@ class AnswerTheCallViewController: UIViewController, AVAudioPlayerDelegate {
             }
         }
         
-        let phoneRinging = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("phone-ringing", ofType: "mp3")!)
+        let phoneRinging = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("the-call", ofType: "m4a")!)
         do {
             try player = AVAudioPlayer(contentsOfURL: phoneRinging)
             player!.prepareToPlay()
             player!.delegate = self
-            player!.numberOfLoops = 1
             player!.play()
+            self.answerCallButton.setTitle("Call Playing...", forState: UIControlState.Normal)
         }  catch _ {
             
         }

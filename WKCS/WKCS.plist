@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LoginViewController</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>TitleViewController</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>AnswerTheCallViewController</string>
+	</dict>
+</array>
+</plist>

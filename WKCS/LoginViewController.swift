@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     @IBOutlet var backgroundView: BackgroundView!
     override func viewDidLoad() {
@@ -23,6 +23,12 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func loginTapped(sender: AnyObject) {
+        self.next(sender)
+    }
 
+    @IBAction func loginAsAssociateTapped(sender: AnyObject) {
+        self.next(sender)
+    }
 }
 

@@ -12,10 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var storyboard:UIStoryboard!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        // Save a reference to the storyboard
+        self.storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        // Kick of the app
+        let fc:FlowController = FlowController.instance
+        let navController = self.window?.rootViewController as! UINavigationController
+        navController.viewControllers = [fc.getViewControllerForStep(fc.currentStep)]
+        
         return true
     }
 
