@@ -34,9 +34,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-Sm-ET2">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlu-Sm-ET2" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="499" y="632" width="124" height="124"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -44,9 +45,10 @@
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oht-K6-B8v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-kW-064">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iv-kW-064" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="202" y="809" width="421" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="LOGIN as an associate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -90,7 +92,7 @@
                     <navigationItem key="navigationItem" id="nxe-ob-JLR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="xMf-f0-Wrd"/>
+                        <outlet property="backgroundView" destination="8bC-Xf-vdC" id="DQe-oB-UUK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -128,9 +130,10 @@
                                 <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKJ-1r-Elx">
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKJ-1r-Elx" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="202" y="809" width="421" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="BEGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -142,7 +145,7 @@
                                     <constraint firstAttribute="height" constant="52" id="ubl-Ep-kFO"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow the prompts trhoughout the app as your team tries to find out what happened to C. Service" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBm-4Y-30o">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Follow the prompts throughout the app as your team tries to find out what happened to C. Service" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBm-4Y-30o">
                                 <rect key="frame" x="348" y="480" width="404" height="205"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
@@ -169,6 +172,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="nGP-Vk-HLc" id="3pb-FZ-TCP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kiY-M7-YZd" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,9 +192,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aue-ob-h5c">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aue-ob-h5c" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="169" y="666" width="421" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Answer the Call">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -199,9 +206,10 @@
                                     <action selector="answerCallTapped:" destination="8cD-G7-4PP" eventType="touchUpInside" id="XPk-2P-YdJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-dh-NC5">
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGF-dh-NC5" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="169" y="758" width="421" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Proceed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -211,13 +219,11 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Who Killed C. Service?"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="answerCallButton" destination="aue-ob-h5c" id="fYU-YR-e3K"/>
+                        <outlet property="backgroundView" destination="1pw-Zf-6qu" id="25s-g3-hlN"/>
                         <outlet property="proceedButton" destination="YGF-dh-NC5" id="m0g-wA-xgV"/>
                     </connections>
                 </viewController>
@@ -239,7 +245,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X5J-dA-bwO">
                                 <rect key="frame" x="77" y="150" width="615" height="820"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SUBTITLE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-Dw-6dL">
                                 <rect key="frame" x="77" y="85" width="615" height="63"/>
@@ -247,11 +252,12 @@
                                 <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-LT-wYp">
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEe-LT-wYp" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="246" y="936" width="277" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Proceed">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
                                 <state key="disabled">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -259,12 +265,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Who Killed C. Service?"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="backgroundView" destination="upH-yl-iXX" id="6TY-ck-5b4"/>
                         <outlet property="button" destination="EEe-LT-wYp" id="Xdh-m9-8rF"/>
                         <outlet property="imageView" destination="X5J-dA-bwO" id="rm8-a0-9fA"/>
                         <outlet property="subtitleLabel" destination="aXl-Dw-6dL" id="0nk-4P-3nv"/>
@@ -274,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="3848" y="485"/>
         </scene>
-        <!--Test Photo Slider-->
+        <!--Photo Slider View Controller-->
         <scene sceneID="ca2-vh-Ffz">
             <objects>
-                <viewController title="Setting the Stage" id="rOG-7R-uXE" userLabel="Test Photo Slider" customClass="PhotoSliderViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoSliderViewController" title="Setting the Stage" id="rOG-7R-uXE" userLabel="Photo Slider View Controller" customClass="PhotoSliderViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zX9-Nt-tWA"/>
                         <viewControllerLayoutGuide type="bottom" id="EBh-Bt-3x6"/>
@@ -290,9 +294,10 @@
                                 <rect key="frame" x="50" y="68" width="676" height="933"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUj-VB-QdY">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUj-VB-QdY" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
                                 <rect key="frame" x="246" y="947" width="277" height="68"/>
                                 <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Proceed">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
@@ -303,12 +308,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Who Killed C. Service?"/>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="keyholeButtonVisible" value="NO"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="backgroundView" destination="Xh0-z2-L46" id="cIP-EZ-lxN"/>
                         <outlet property="button" destination="tUj-VB-QdY" id="Guu-ik-n7d"/>
                         <outlet property="photoSlider" destination="EFj-oH-1K4" id="8Sz-ee-TxR"/>
                     </connections>
@@ -316,6 +321,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C5N-rt-rf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4669" y="485"/>
+        </scene>
+        <!--Scenario Explanation View Controller-->
+        <scene sceneID="gHG-QX-JP1">
+            <objects>
+                <viewController storyboardIdentifier="ScenarioExplanationViewController" id="5zx-Pw-bkN" userLabel="Scenario Explanation View Controller" customClass="ScenarioExplanationViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xnb-w5-4H9"/>
+                        <viewControllerLayoutGuide type="bottom" id="ORy-4Y-DJm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KdX-QW-ao4" customClass="BackgroundView" customModule="WKCS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LOCATION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2y-xg-VJt" userLabel="label1">
+                                <rect key="frame" x="8" y="474" width="752" height="75"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCENARIO ONE" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaB-va-yvE" userLabel="label2">
+                                <rect key="frame" x="47" y="406" width="674" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGg-oO-JmI" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
+                                <rect key="frame" x="246" y="934" width="277" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Proceed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6dT-f6-5hi">
+                                <rect key="frame" x="209" y="199" width="350" height="187"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y40-dc-0TN" userLabel="description">
+                                <rect key="frame" x="132" y="813" width="391" height="113"/>
+                                <string key="text">State the Objective. 
+Explain the Scenario. 
+Then click "Proceed"</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyholeButtonEnabled" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="KdX-QW-ao4" id="PGo-XP-Ok0"/>
+                        <outlet property="descriptionLabel" destination="y40-dc-0TN" id="PbS-Xq-CLl"/>
+                        <outlet property="imageView" destination="6dT-f6-5hi" id="wwX-b0-Ijc"/>
+                        <outlet property="subtitle2Label" destination="e2y-xg-VJt" id="JGb-qb-Jcg"/>
+                        <outlet property="subtitleLabel" destination="xaB-va-yvE" id="9bl-UB-JhM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EcL-x2-v5t" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2118" y="1625"/>
         </scene>
     </scenes>
     <resources>

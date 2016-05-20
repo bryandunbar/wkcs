@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		E353DD6A1CEE165A00D18932 /* PhotoSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD691CEE165A00D18932 /* PhotoSliderViewController.swift */; };
-		E353DD6C1CEE16CC00D18932 /* ScenarioPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E353DD6B1CEE16CC00D18932 /* ScenarioPhotos.xcassets */; };
 		E353DD6E1CEE3EDB00D18932 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD6D1CEE3EDB00D18932 /* UIViewExtensions.swift */; };
-		E353DD711CEF482100D18932 /* Scenario1Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E353DD701CEF482100D18932 /* Scenario1Photos.xcassets */; };
-		E353DD731CEF483E00D18932 /* Scenario2Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E353DD721CEF483E00D18932 /* Scenario2Photos.xcassets */; };
+		E353DD711CEF482100D18932 /* ScenarioPhotos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E353DD701CEF482100D18932 /* ScenarioPhotos.xcassets */; };
 		E353DD751CEF48E000D18932 /* WKCS.plist in Resources */ = {isa = PBXBuildFile; fileRef = E353DD741CEF48E000D18932 /* WKCS.plist */; };
 		E353DD771CEF49C000D18932 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD761CEF49C000D18932 /* LargeImageViewController.swift */; };
 		E353DD791CEF4A3F00D18932 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD781CEF4A3F00D18932 /* BaseViewController.swift */; };
 		E353DD7B1CEF4AEF00D18932 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD7A1CEF4AEF00D18932 /* Constants.swift */; };
 		E353DD7E1CEF4BFD00D18932 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD7D1CEF4BFD00D18932 /* FlowController.swift */; };
+		E353DD801CEF72EB00D18932 /* ScenarioExplanationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD7F1CEF72EB00D18932 /* ScenarioExplanationViewController.swift */; };
+		E353DD821CEF8C2F00D18932 /* UIShadowedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD811CEF8C2F00D18932 /* UIShadowedButton.swift */; };
 		E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */; };
 		E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */; };
 		E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F93ED61CECA48D00CCBFFF /* Main.storyboard */; };
@@ -35,15 +35,15 @@
 
 /* Begin PBXFileReference section */
 		E353DD691CEE165A00D18932 /* PhotoSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSliderViewController.swift; sourceTree = "<group>"; };
-		E353DD6B1CEE16CC00D18932 /* ScenarioPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = ScenarioPhotos.xcassets; path = ../ScenarioPhotos.xcassets; sourceTree = "<group>"; };
 		E353DD6D1CEE3EDB00D18932 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		E353DD701CEF482100D18932 /* Scenario1Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Scenario1Photos.xcassets; sourceTree = "<group>"; };
-		E353DD721CEF483E00D18932 /* Scenario2Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Scenario2Photos.xcassets; sourceTree = "<group>"; };
+		E353DD701CEF482100D18932 /* ScenarioPhotos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ScenarioPhotos.xcassets; sourceTree = "<group>"; };
 		E353DD741CEF48E000D18932 /* WKCS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WKCS.plist; sourceTree = "<group>"; };
 		E353DD761CEF49C000D18932 /* LargeImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
 		E353DD781CEF4A3F00D18932 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E353DD7A1CEF4AEF00D18932 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E353DD7D1CEF4BFD00D18932 /* FlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
+		E353DD7F1CEF72EB00D18932 /* ScenarioExplanationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenarioExplanationViewController.swift; sourceTree = "<group>"; };
+		E353DD811CEF8C2F00D18932 /* UIShadowedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIShadowedButton.swift; sourceTree = "<group>"; };
 		E3F93ECF1CECA48D00CCBFFF /* WKCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -77,8 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				E353DD741CEF48E000D18932 /* WKCS.plist */,
-				E353DD701CEF482100D18932 /* Scenario1Photos.xcassets */,
-				E353DD721CEF483E00D18932 /* Scenario2Photos.xcassets */,
+				E353DD701CEF482100D18932 /* ScenarioPhotos.xcassets */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -118,7 +117,6 @@
 				E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */,
 				E3F93ED61CECA48D00CCBFFF /* Main.storyboard */,
 				E3F93ED91CECA48D00CCBFFF /* Assets.xcassets */,
-				E353DD6B1CEE16CC00D18932 /* ScenarioPhotos.xcassets */,
 				E3F93EDB1CECA48D00CCBFFF /* LaunchScreen.storyboard */,
 				E3F93EDE1CECA48D00CCBFFF /* Info.plist */,
 				E353DD7A1CEF4AEF00D18932 /* Constants.swift */,
@@ -136,6 +134,7 @@
 				E3F93EFB1CEE0DEC00CCBFFF /* PhotoSlider.swift */,
 				E3F93EF91CEE0CEA00CCBFFF /* UIRoundedCornerView.swift */,
 				E353DD6D1CEE3EDB00D18932 /* UIViewExtensions.swift */,
+				E353DD811CEF8C2F00D18932 /* UIShadowedButton.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -148,6 +147,7 @@
 				E353DD691CEE165A00D18932 /* PhotoSliderViewController.swift */,
 				E353DD761CEF49C000D18932 /* LargeImageViewController.swift */,
 				E353DD781CEF4A3F00D18932 /* BaseViewController.swift */,
+				E353DD7F1CEF72EB00D18932 /* ScenarioExplanationViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -223,12 +223,10 @@
 				E3F93EEF1CED691100CCBFFF /* phone-ringing.mp3 in Resources */,
 				E3F93EDD1CECA48D00CCBFFF /* LaunchScreen.storyboard in Resources */,
 				E3F93EF21CEDEFA200CCBFFF /* the-call.m4a in Resources */,
-				E353DD6C1CEE16CC00D18932 /* ScenarioPhotos.xcassets in Resources */,
 				E353DD751CEF48E000D18932 /* WKCS.plist in Resources */,
 				E3F93EDA1CECA48D00CCBFFF /* Assets.xcassets in Resources */,
 				E3F93EE81CECA50800CCBFFF /* BackgroundView.xib in Resources */,
-				E353DD731CEF483E00D18932 /* Scenario2Photos.xcassets in Resources */,
-				E353DD711CEF482100D18932 /* Scenario1Photos.xcassets in Resources */,
+				E353DD711CEF482100D18932 /* ScenarioPhotos.xcassets in Resources */,
 				E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,11 +245,13 @@
 				E3F93EEA1CECA55B00CCBFFF /* BackgroundView.swift in Sources */,
 				E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */,
 				E3F93EED1CECF90000CCBFFF /* AnswerTheCallViewController.swift in Sources */,
+				E353DD821CEF8C2F00D18932 /* UIShadowedButton.swift in Sources */,
 				E3F93EFC1CEE0DEC00CCBFFF /* PhotoSlider.swift in Sources */,
 				E353DD7E1CEF4BFD00D18932 /* FlowController.swift in Sources */,
 				E353DD6A1CEE165A00D18932 /* PhotoSliderViewController.swift in Sources */,
 				E353DD6E1CEE3EDB00D18932 /* UIViewExtensions.swift in Sources */,
 				E3F93EFA1CEE0CEA00CCBFFF /* UIRoundedCornerView.swift in Sources */,
+				E353DD801CEF72EB00D18932 /* ScenarioExplanationViewController.swift in Sources */,
 				E353DD7B1CEF4AEF00D18932 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,6 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
-    @IBOutlet var backgroundView: BackgroundView!
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -10,15 +10,18 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    var data:NSDictionary! {
-        didSet {
-            self.configureView()
-        }
-    }
+    @IBOutlet var backgroundView: BackgroundView!
     
+    var step:Step!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureView()
+    }
+    
+    var nextButton:UIButton? {
+        get {
+            return self.view.viewWithTag(Constants.NEXT_BUTTON_TAG) as? UIButton
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,10 +31,15 @@ class BaseViewController: UIViewController {
     
     func configureView() {
         // Configure the next button
-        if let button:UIButton? = self.view.viewWithTag(Constants.NEXT_BUTTON_TAG) as? UIButton {
-            button?.addTarget(self, action: #selector(next), forControlEvents: UIControlEvents.TouchUpInside)
+        if let button = self.nextButton {
+            button.addTarget(self, action: #selector(next), forControlEvents: .TouchUpInside)
+            button.setTitle(step.nextButtonTitle, forState: .Normal)
         }
         
+        self.backgroundView.title = self.step.title
+        self.backgroundView.footerVisible = self.step.footerVisible
+        self.backgroundView.keyholeButtonEnabled = self.step.keyholeButtonEnabled
+        self.backgroundView.keyholeButtonVisible = self.step.keyholeButtonVisible
     }
     
     @IBAction func next(sender:AnyObject) {

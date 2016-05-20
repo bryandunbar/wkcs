@@ -5,14 +5,112 @@
 	<dict>
 		<key>viewControllerIdentifier</key>
 		<string>LoginViewController</string>
+		<key>keyholeButtonEnabled</key>
+		<false/>
+		<key>footerVisible</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>viewControllerIdentifier</key>
 		<string>TitleViewController</string>
+		<key>keyholeButtonEnabled</key>
+		<false/>
+		<key>footerVisible</key>
+		<false/>
 	</dict>
 	<dict>
 		<key>viewControllerIdentifier</key>
 		<string>AnswerTheCallViewController</string>
+		<key>keyholeButtonEnabled</key>
+		<false/>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>Opening Clue</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>subtitle</key>
+		<string>Setting the Stage</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>keyholeButtonEnabled</key>
+		<false/>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>Blue footprints</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario One</string>
+		<key>subtitle2</key>
+		<string>Retail Floor</string>
+		<key>description</key>
+		<string>State the objective.
+Explain the scenario.
+Then click &quot;Proceed&quot;</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Find The clue</string>
+		<key>description</key>
+		<string>After finding the clue,
+click &quot;Proceed&quot; to review the evidence.</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>scenario1_evidence</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>PhotoSliderViewController</string>
+		<key>keyholeButtonVisible</key>
+		<false/>
+		<key>images</key>
+		<array>
+			<string>Scenario1/picture1</string>
+			<string>Scenario1/picture2</string>
+			<string>Scenario1/picture3</string>
+			<string>Scenario1/picture4</string>
+			<string>Scenario1/picture5</string>
+			<string>Scenario1/picture6</string>
+			<string>Scenario1/picture7</string>
+			<string>Scenario1/picture8</string>
+		</array>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
 	</dict>
 </array>
 </plist>

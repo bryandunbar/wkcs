@@ -38,10 +38,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ncm-9F-5hI" userLabel="Footer">
-                    <rect key="frame" x="0.0" y="984" width="768" height="40"/>
+                    <rect key="frame" x="0.0" y="969" width="768" height="55"/>
                     <color key="backgroundColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="FtJ-rc-qLE"/>
+                        <constraint firstAttribute="height" constant="55" id="FtJ-rc-qLE"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBF-sn-p38">

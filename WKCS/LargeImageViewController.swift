@@ -24,6 +24,13 @@ class LargeImageViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func configureView() {
+        super.configureView()
+        
+        self.imageView.image = UIImage(named: step.imageName!) // This needs to be set
+        self.subtitleLabel.text = self.step.subtitle
+    }
+    
 
     /*
     // MARK: - Navigation

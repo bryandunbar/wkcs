@@ -17,6 +17,7 @@ class PhotoSlider: NibDesignable, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageNumberLabel: UILabel!
+    @IBOutlet weak var topLabel: UILabel!
     
     var delegate:PhotoSliderDelegate?
     
@@ -86,17 +87,18 @@ class PhotoSlider: NibDesignable, UIScrollViewDelegate {
         self.imageNumberLabel.hidden = self.images.count == 0
     }
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView){
-        
-        var previousSlide = self.currentSlideNumber
-        
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         let pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
         let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
-        // Change the indicator
         self.pageControl.currentPage = Int(currentPage);
         self.imageNumberLabel.text = "\(Int(currentPage + 1))"
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView){
         
-        // Notify delegate
+        let previousSlide = self.currentSlideNumber
+        let pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
+        let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
         self.delegate?.slideChanged?(self, oldSlideNumber: previousSlide, newSlideNumber: Int(currentPage))
         
     }

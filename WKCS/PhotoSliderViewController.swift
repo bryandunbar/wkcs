@@ -12,15 +12,28 @@ class PhotoSliderViewController: BaseViewController, PhotoSliderDelegate {
 
     @IBOutlet weak var photoSlider: PhotoSlider!
     @IBOutlet weak var button: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
-        self.photoSlider.addImage(UIImage(named:"scenario1_1")!)
-        self.photoSlider.addImage(UIImage(named:"scenario1_2")!)
-        self.photoSlider.addImage(UIImage(named:"scenario1_3")!)
-        self.photoSlider.delegate = self
+        photoSlider.delegate = self
+    }
+    
+    override var nextButton: UIButton? {
+        get {
+            return self.button
+        }
+    }
+    
+    override func configureView() {
+        super.configureView()
+        
+        if let images = step.images {
+            for image in images {
+                self.photoSlider.addImage(UIImage(named: image)!)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

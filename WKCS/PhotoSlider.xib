@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoSlider" customModule="WKCS" customModuleProvider="target">
@@ -10,6 +11,7 @@
                 <outlet property="imageNumberLabel" destination="nAe-TA-Lpi" id="AYz-7k-fHZ"/>
                 <outlet property="pageControl" destination="eZV-Pi-bSC" id="x9g-7o-9dX"/>
                 <outlet property="scrollView" destination="av4-v6-tp8" id="tST-ei-VNd"/>
+                <outlet property="topLabel" destination="cB7-04-VRy" id="hgk-Zf-R7o"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -18,40 +20,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av4-v6-tp8">
-                    <rect key="frame" x="48" y="24" width="512" height="779"/>
+                    <rect key="frame" x="48" y="88" width="512" height="715"/>
                 </scrollView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eZV-Pi-bSC">
                     <rect key="frame" x="48" y="811" width="512" height="37"/>
                 </pageControl>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-TA-Lpi">
-                    <rect key="frame" x="510" y="704" width="50" height="50"/>
+                    <rect key="frame" x="535" y="723" width="50" height="50"/>
                     <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="1xg-RB-FKF"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="PeQ-PA-8I8"/>
-                        <constraint firstAttribute="height" constant="50" id="U1k-gr-p35"/>
-                        <constraint firstAttribute="width" constant="50" id="gC6-sJ-iLi"/>
+                        <constraint firstAttribute="height" constant="50" id="Jsf-f7-oIa"/>
+                        <constraint firstAttribute="width" constant="50" id="cOs-2D-5By"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="1xg-RB-FKF"/>
-                            <exclude reference="PeQ-PA-8I8"/>
-                        </mask>
-                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Left and Right" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cB7-04-VRy">
+                    <rect key="frame" x="48" y="31" width="512" height="21"/>
+                    <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                    <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                    <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="nAe-TA-Lpi" secondAttribute="trailing" constant="48" id="0Tn-rh-kj1"/>
                 <constraint firstAttribute="bottom" secondItem="eZV-Pi-bSC" secondAttribute="bottom" constant="70" id="0xH-YT-v5Z"/>
+                <constraint firstItem="nAe-TA-Lpi" firstAttribute="centerX" secondItem="av4-v6-tp8" secondAttribute="trailing" id="APb-Kh-Bmm"/>
+                <constraint firstItem="cB7-04-VRy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="AQa-y3-m0D"/>
+                <constraint firstAttribute="trailing" secondItem="cB7-04-VRy" secondAttribute="trailing" constant="48" id="CSe-xB-1fJ"/>
                 <constraint firstAttribute="trailing" secondItem="eZV-Pi-bSC" secondAttribute="trailing" constant="48" id="JKq-Jx-bF0"/>
-                <constraint firstItem="av4-v6-tp8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="XwZ-pe-V23"/>
+                <constraint firstItem="nAe-TA-Lpi" firstAttribute="bottom" secondItem="av4-v6-tp8" secondAttribute="bottom" constant="-30" id="JiU-8m-oRp"/>
                 <constraint firstItem="eZV-Pi-bSC" firstAttribute="top" secondItem="av4-v6-tp8" secondAttribute="bottom" constant="8" id="ZUh-kY-l2d"/>
-                <constraint firstItem="eZV-Pi-bSC" firstAttribute="top" secondItem="nAe-TA-Lpi" secondAttribute="bottom" constant="57" id="cpP-GH-osF"/>
+                <constraint firstItem="cB7-04-VRy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="31" id="cm2-es-3cN"/>
                 <constraint firstAttribute="trailing" secondItem="av4-v6-tp8" secondAttribute="trailing" constant="48" id="dVe-MR-mpW"/>
+                <constraint firstItem="av4-v6-tp8" firstAttribute="top" secondItem="cB7-04-VRy" secondAttribute="bottom" constant="36" id="ryT-7b-hMw"/>
                 <constraint firstItem="av4-v6-tp8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="tb0-eR-hiH"/>
                 <constraint firstItem="eZV-Pi-bSC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="vzg-b9-t41"/>
             </constraints>
