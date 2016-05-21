@@ -20,6 +20,20 @@ import UIKit
         setup()
     }
     
+    @IBInspectable var borderColor:UIColor? {
+        didSet {
+            self.layer.borderColor = borderColor?.CGColor
+            self.layoutIfNeeded()
+        }
+    }
+    
+    @IBInspectable var borderWidth:CGFloat = 0.0 {
+        didSet {
+            self.layer.borderWidth = borderWidth
+            self.layoutIfNeeded()
+        }
+    }
+    
     func setup() {
         self.layer.cornerRadius = self.cornerRadius;
     }
@@ -27,7 +41,7 @@ import UIKit
     @IBInspectable var cornerRadius:CGFloat = 5.0 {
         didSet {
             self.layer.masksToBounds = true
-            setNeedsLayout()
+            self.layoutIfNeeded()
         }
     }
     

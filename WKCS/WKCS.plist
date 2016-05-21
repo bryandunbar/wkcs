@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>viewControllerIdentifier</key>
+		<string>RolePlayViewController</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>timerDuration</key>
+		<real>240</real>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
 		<string>LoginViewController</string>
 		<key>keyholeButtonEnabled</key>
 		<false/>
@@ -109,6 +119,23 @@ click &quot;Proceed&quot; to review the evidence.</string>
 		<string>Proceed</string>
 		<key>title</key>
 		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>evidence_folder</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Discuss the Evidence</string>
+		<key>description</key>
+		<string>After discussing the evidence,
+click &quot;Proceed&quot;.</string>
 		<key>themeColor</key>
 		<string>100.0,49.0,41.0,0.0</string>
 	</dict>
