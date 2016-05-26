@@ -21,6 +21,7 @@
 		E353DD881CF00A9F00D18932 /* ClockTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD871CF00A9F00D18932 /* ClockTimerView.swift */; };
 		E353DD8A1CF00D1200D18932 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E353DD891CF00D1200D18932 /* Assets.xcassets */; };
 		E353DD8C1CF00FEC00D18932 /* RolePlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DD8B1CF00FEC00D18932 /* RolePlayViewController.swift */; };
+		E353DDAE1CF74F5E00D18932 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E353DDAD1CF74F5E00D18932 /* AppController.swift */; };
 		E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */; };
 		E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */; };
 		E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F93ED61CECA48D00CCBFFF /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		E353DD871CF00A9F00D18932 /* ClockTimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockTimerView.swift; sourceTree = "<group>"; };
 		E353DD891CF00D1200D18932 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = WKCS/Assets.xcassets; sourceTree = "<group>"; };
 		E353DD8B1CF00FEC00D18932 /* RolePlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RolePlayViewController.swift; sourceTree = "<group>"; };
+		E353DDAD1CF74F5E00D18932 /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
 		E3F93ECF1CECA48D00CCBFFF /* WKCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E353DD7D1CEF4BFD00D18932 /* FlowController.swift */,
+				E353DDAD1CF74F5E00D18932 /* AppController.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				E353DD8C1CF00FEC00D18932 /* RolePlayViewController.swift in Sources */,
 				E353DD791CEF4A3F00D18932 /* BaseViewController.swift in Sources */,
 				E3F93EE61CECA4E800CCBFFF /* NibDesignable.swift in Sources */,
+				E353DDAE1CF74F5E00D18932 /* AppController.swift in Sources */,
 				E3F93EEA1CECA55B00CCBFFF /* BackgroundView.swift in Sources */,
 				E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */,
 				E3F93EED1CECF90000CCBFFF /* AnswerTheCallViewController.swift in Sources */,

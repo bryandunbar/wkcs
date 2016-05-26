@@ -46,7 +46,11 @@ struct Step : CustomStringConvertible {
 class FlowController : NSObject {
     
     var steps:[Step] = []
-    var currentStep:Step!
+    var currentStep:Step! {
+        didSet {
+            AppController.instance.savedStep = currentStep.idx // Saves progress
+        }
+    }
     
     var nextStep:Step? {
         get {
@@ -129,8 +133,7 @@ class FlowController : NSObject {
                 }
             }
             
-            // TODO: Save progress....
-            currentStep = steps[0]
+            currentStep = steps[AppController.instance.savedStep] // Restore progress
         }
     }
     

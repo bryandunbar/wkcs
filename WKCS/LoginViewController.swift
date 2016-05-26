@@ -23,10 +23,12 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func loginTapped(sender: AnyObject) {
+        AppController.instance.isSGM = true
         self.next(sender)
     }
 
     @IBAction func loginAsAssociateTapped(sender: AnyObject) {
+        AppController.instance.isSGM = false
         self.next(sender)
     }
 }
