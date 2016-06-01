@@ -488,33 +488,33 @@ Then click "Proceed"</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-pD-OFU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-pD-OFU">
                                 <rect key="frame" x="28" y="514" width="712" height="353"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="52" id="yEC-Nf-Vuu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionCell" rowHeight="52" id="yEC-Nf-Vuu" customClass="QuestionTableViewCell" customModule="WKCS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="712" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yEC-Nf-Vuu" id="UAd-R6-05x">
-                                            <rect key="frame" x="0.0" y="0.0" width="712" height="51"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="52"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the question label..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-ki-vtk">
-                                                    <rect key="frame" x="8" y="0.0" width="395" height="51"/>
+                                                    <rect key="frame" x="8" y="5" width="450" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="395" id="X0b-61-sk9"/>
+                                                        <constraint firstAttribute="width" constant="450" id="X0b-61-sk9"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Is-eP-xi2" customClass="UIToggleButtonGroup" customModule="WKCS" customModuleProvider="target">
-                                                    <rect key="frame" x="411" y="0.0" width="275" height="51"/>
+                                                    <rect key="frame" x="466" y="5" width="220" height="42"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-TN-bgN" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="42"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="51" id="hsB-F8-KuH"/>
+                                                                <constraint firstAttribute="width" constant="40" id="hsB-F8-KuH"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="1">
@@ -531,9 +531,9 @@ Then click "Proceed"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-aw-mUy" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
-                                                            <rect key="frame" x="56" y="0.0" width="51" height="51"/>
+                                                            <rect key="frame" x="45" y="0.0" width="40" height="42"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="51" id="v0T-8X-rCf"/>
+                                                                <constraint firstAttribute="width" constant="40" id="v0T-8X-rCf"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="2">
@@ -550,9 +550,9 @@ Then click "Proceed"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWQ-nY-vD3" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
-                                                            <rect key="frame" x="112" y="0.0" width="51" height="51"/>
+                                                            <rect key="frame" x="90" y="0.0" width="40" height="42"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="51" id="SEP-KG-gSt"/>
+                                                                <constraint firstAttribute="width" constant="40" id="SEP-KG-gSt"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="3">
@@ -569,9 +569,9 @@ Then click "Proceed"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCq-14-PSm" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
-                                                            <rect key="frame" x="168" y="0.0" width="51" height="51"/>
+                                                            <rect key="frame" x="135" y="0.0" width="40" height="42"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="51" id="cSG-Th-wwJ"/>
+                                                                <constraint firstAttribute="width" constant="40" id="cSG-Th-wwJ"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="4">
@@ -588,9 +588,9 @@ Then click "Proceed"</string>
                                                             </userDefinedRuntimeAttributes>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vq-YP-PFU" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
-                                                            <rect key="frame" x="224" y="0.0" width="51" height="51"/>
+                                                            <rect key="frame" x="180" y="0.0" width="40" height="42"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="51" id="C8z-lo-DAz"/>
+                                                                <constraint firstAttribute="width" constant="40" id="C8z-lo-DAz"/>
                                                             </constraints>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <state key="normal" title="5">
@@ -621,14 +621,43 @@ Then click "Proceed"</string>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0Is-eP-xi2" firstAttribute="top" secondItem="UAd-R6-05x" secondAttribute="top" id="QFJ-TX-2Ku"/>
+                                                <constraint firstItem="0Is-eP-xi2" firstAttribute="top" secondItem="UAd-R6-05x" secondAttribute="top" constant="5" id="QFJ-TX-2Ku"/>
                                                 <constraint firstItem="0Is-eP-xi2" firstAttribute="leading" secondItem="7n4-ki-vtk" secondAttribute="trailing" constant="8" id="Qwf-3L-KnP"/>
-                                                <constraint firstItem="7n4-ki-vtk" firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" id="YwC-YS-lM6"/>
+                                                <constraint firstItem="7n4-ki-vtk" firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" constant="-1" id="YwC-YS-lM6"/>
                                                 <constraint firstItem="7n4-ki-vtk" firstAttribute="top" secondItem="0Is-eP-xi2" secondAttribute="top" id="c5J-pe-J9b"/>
-                                                <constraint firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" id="d9T-g6-wld"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" constant="5" id="d9T-g6-wld"/>
                                                 <constraint firstAttribute="trailing" secondItem="0Is-eP-xi2" secondAttribute="trailing" constant="26" id="jSI-oL-f2c"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="questionLabel" destination="7n4-ki-vtk" id="fVP-Et-Pbj"/>
+                                            <outlet property="toggleButtonGroup" destination="0Is-eP-xi2" id="bkW-mC-NwQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeaderCell" rowHeight="44" id="5Nz-0P-r2h" customClass="QuestionHeaderTableViewCell" customModule="WKCS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="80" width="712" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nz-0P-r2h" id="7iM-Bt-dTV">
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeD-6I-WhT">
+                                                    <rect key="frame" x="8" y="0.0" width="696" height="44"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="VeD-6I-WhT" secondAttribute="bottom" id="BnL-HE-k6r"/>
+                                                <constraint firstItem="VeD-6I-WhT" firstAttribute="leading" secondItem="7iM-Bt-dTV" secondAttribute="leading" constant="8" id="R1O-ig-7bI"/>
+                                                <constraint firstItem="VeD-6I-WhT" firstAttribute="top" secondItem="7iM-Bt-dTV" secondAttribute="top" id="W7o-4Y-Unq"/>
+                                                <constraint firstAttribute="trailing" secondItem="VeD-6I-WhT" secondAttribute="trailing" constant="8" id="fto-u4-hIM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="VeD-6I-WhT" id="r78-un-nhL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -647,6 +676,9 @@ Then click "Proceed"</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backgroundView" destination="4Op-TB-Dug" id="DIc-uR-IVo"/>
+                        <outlet property="subtitle2Label" destination="4n8-6e-Eeo" id="QKG-Sc-0hV"/>
+                        <outlet property="subtitleLabel" destination="hs2-kp-0az" id="oll-1m-r5D"/>
+                        <outlet property="tableView" destination="y4c-pD-OFU" id="nTB-oa-dih"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Uc-4o-AWV" sceneMemberID="firstResponder"/>

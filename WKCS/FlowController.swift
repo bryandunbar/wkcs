@@ -36,6 +36,7 @@ struct Step : CustomStringConvertible {
     var themeColor:UIColor?
     var images:[String]?
     var timerDuration:NSTimeInterval?
+    var questions:[[String:AnyObject]]?
     
     var description: String {
         return "Step \(idx)"
@@ -125,6 +126,10 @@ class FlowController : NSObject {
                         
                         if let timerDuration = dict["timerDuration"] as? NSNumber {
                             step.timerDuration = timerDuration.doubleValue
+                        }
+                        
+                        if let questions = dict["questions"] as? [[String:AnyObject]] {
+                            step.questions = questions
                         }
                         
                     

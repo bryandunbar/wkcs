@@ -156,5 +156,41 @@ tap &quot;Proceed&quot;.</string>
 		<key>themeColor</key>
 		<string>100.0,49.0,41.0,0.0</string>
 	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>EvaluationViewController</string>
+		<key>nextButtonTitle</key>
+		<string>Submit</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario One</string>
+		<key>subtitle2</key>
+		<string>Evaluation</string>
+		<key>themeColor</key>
+		<string>100.0,49.0,41.0,0.0</string>
+		<key>questions</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>How well did the characters:</string>
+				<key>items</key>
+				<array>
+					<string>Do more listening than talking</string>
+					<string>Focus/ingore distractions</string>
+					<string>Ask relevant, proving questions</string>
+					<string>Observe and interupt customer cues</string>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>How well did the other associates:</string>
+				<key>items</key>
+				<array>
+					<string>Participate in the scenario discussions</string>
+				</array>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>
