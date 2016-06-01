@@ -22,4 +22,48 @@ extension UIView {
         return arr
     }
     
+    
+    func setHidden(hidden:Bool, animated:Bool, completion: (() -> Void)?) {
+        
+        if !animated {
+            self.hidden = hidden
+            return
+        }
+        
+        // Ensure the proper alpha
+        if hidden {
+            self.alpha = 1.0
+        } else {
+            self.alpha = 0.0
+            self.hidden = false // Its actually visible, but at 0 alpha
+        }
+
+        // Animate the change
+        UIView.animateWithDuration(0.4, animations: {
+            
+            if hidden {
+                self.alpha = 0.0
+            } else {
+                
+                self.alpha = 1.0
+            }
+            
+            
+            }) { (complete) in
+                self.hidden = hidden
+                if complete {
+                    completion?()
+                }
+        }
+        
+    }
+    
+    func fadeTransition(duration:CFTimeInterval) {
+        let animation:CATransition = CATransition()
+        animation.timingFunction = CAMediaTimingFunction(name:
+            kCAMediaTimingFunctionEaseInEaseOut)
+        animation.type = kCATransitionFade
+        animation.duration = duration
+        self.layer.addAnimation(animation, forKey: kCATransitionFade)
+    }
 }

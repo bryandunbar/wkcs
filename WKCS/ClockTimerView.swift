@@ -8,10 +8,15 @@
 
 import UIKit
 
+
+@objc protocol ClockTimerViewDelegate : NSObjectProtocol {
+    optional func timerExpired(timerView:ClockTimerView)
+}
+
 class ClockTimerView: NibDesignable {
 
     @IBOutlet weak var timerLabel: UILabel!
-    
+    var delegate:ClockTimerViewDelegate?
     
     private var timer:NSTimer!
     var timerSeconds:NSTimeInterval! {
@@ -34,6 +39,8 @@ class ClockTimerView: NibDesignable {
     func stop() {
         self.timer?.invalidate()
         self.timer = nil
+        
+        self.delegate?.timerExpired?(self)
     }
     
     @objc private func update() {
@@ -48,12 +55,17 @@ class ClockTimerView: NibDesignable {
     func updateTimerLabel(ti:NSTimeInterval) {
         
         if ti <= 0 {
-            self.timerLabel.text = nil
+            animateTextChange("--")
         } else {
         
             let dateComponentsFormatter = NSDateComponentsFormatter()
-            self.timerLabel.text = dateComponentsFormatter.stringFromTimeInterval(ti)
+            animateTextChange(dateComponentsFormatter.stringFromTimeInterval(ti)!)
         }
 
+    }
+    
+    func animateTextChange(newText:String) {
+        self.timerLabel.fadeTransition(0.4)
+        self.timerLabel.text = newText
     }
 }

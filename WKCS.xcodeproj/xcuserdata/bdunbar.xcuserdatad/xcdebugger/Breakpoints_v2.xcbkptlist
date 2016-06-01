@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WKCS/RolePlayViewController.swift"
-            timestampString = "485495111.022138"
+            timestampString = "485979146.312533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "configureView()"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WKCS/ClockTimerView.swift"
-            timestampString = "485495183.377681"
+            timestampString = "485979146.312533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "ClockTimerView"
             landmarkType = "3">
          </BreakpointContent>
@@ -400,6 +400,118 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "FlowController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKCS/UIViewExtensions.swift"
+            timestampString = "485981170.094368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "setHidden(_:animated:completion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in WKCS):__ObjC.UIView.setHidden (Swift.Bool, animated : Swift.Bool, completion : Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "WKCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bdunbar/Projects/WKCS/WKCS/UIViewExtensions.swift"
+                  timestampString = "485980557.581421"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "58">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in WKCS):__ObjC.UIView.(setHidden (Swift.Bool, animated : Swift.Bool, completion : Swift.Optional&lt;() -&gt; ()&gt;) -&gt; ()).(closure #1)"
+                  moduleName = "WKCS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bdunbar/Projects/WKCS/WKCS/UIViewExtensions.swift"
+                  timestampString = "485980557.585713"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKCS/UIViewExtensions.swift"
+            timestampString = "485981170.094368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "setHidden(_:animated:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKCS/UIViewExtensions.swift"
+            timestampString = "485981170.094368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "setHidden(_:animated:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKCS/UIViewExtensions.swift"
+            timestampString = "485981170.094368"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "setHidden(_:animated:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WKCS/RolePlayViewController.swift"
+            timestampString = "486047738.588128"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "RolePlayViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>

@@ -43,7 +43,9 @@ class PhotoSliderViewController: BaseViewController, PhotoSliderDelegate {
     
     func slideChanged(photoSlider: PhotoSlider, oldSlideNumber: Int, newSlideNumber: Int) {
         if photoSlider.isLastSlide {
-            self.button.hidden = false
+            
+            
+            self.button.setHidden(false, animated: true, completion: nil)
         }
     }
     

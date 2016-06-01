@@ -8,14 +8,41 @@
 
 import UIKit
 
-class RolePlayViewController: BaseViewController {
+class RolePlayViewController: BaseViewController, ClockTimerViewDelegate {
 
     @IBOutlet weak var rolePlayBegunButton: UIShadowedButton!
     @IBOutlet weak var clockTimerView: ClockTimerView!
     
+    @IBOutlet weak var proceedButton: UIShadowedButton!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    override var nextButton: UIButton? {
+        get {
+            return self.proceedButton
+        }
+    }
     override func configureView() {
+        super.configureView()
+        
+        self.clockTimerView.delegate = self
+        
+        if AppController.instance.isSGM {
+            descriptionLabel.text = "Tap here when the participants begin the role play."
+            rolePlayBegunButton.hidden = false
+            proceedButton.hidden = true
+        } else {
+            descriptionLabel.text = "Tap \"Proceed to Debrief\" once the role play has been completed."
+            proceedButton.hidden = false
+            rolePlayBegunButton.hidden = true
+            self.clockTimerView.hidden = true
+        }
+        
         self.clockTimerView.timerSeconds = step.timerDuration
+    }
+    
+    func timerExpired(timerView: ClockTimerView) {
+        proceedButton.setHidden(false, animated: true, completion: nil)
     }
 
     /*
@@ -30,8 +57,15 @@ class RolePlayViewController: BaseViewController {
 
     @IBAction func rolePlayBegunTapped(sender: AnyObject) {
         
-        self.clockTimerView.start()
-        self.rolePlayBegunButton.hidden = true
+        descriptionLabel.fadeTransition(0.4)
+        descriptionLabel.text = "Tap \"Proceed to Debrief\" once the role play has been completed."
         
+        self.clockTimerView.start()
+        
+
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(0.2 * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+            self.rolePlayBegunButton.setHidden(true, animated: true, completion: nil)
+        })
+                
     }
 }

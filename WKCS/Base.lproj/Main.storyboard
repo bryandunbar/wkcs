@@ -426,6 +426,14 @@ Then click "Proceed"</string>
                                 <rect key="frame" x="199" y="776" width="371" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nvv-OL-QN8" userLabel="Proceed" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
+                                <rect key="frame" x="225" y="631" width="319" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Proceed to Debrief">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -436,6 +444,8 @@ Then click "Proceed"</string>
                     <connections>
                         <outlet property="backgroundView" destination="x6T-f9-Ndg" id="DP2-cN-HE1"/>
                         <outlet property="clockTimerView" destination="RiX-89-jaw" id="hmi-mL-ahJ"/>
+                        <outlet property="descriptionLabel" destination="GBT-tu-5Ds" id="pA3-vw-G5c"/>
+                        <outlet property="proceedButton" destination="Nvv-OL-QN8" id="6fC-Gh-paV"/>
                         <outlet property="rolePlayBegunButton" destination="27P-He-ng6" id="l8v-B9-w9H"/>
                     </connections>
                 </viewController>
@@ -443,8 +453,209 @@ Then click "Proceed"</string>
             </objects>
             <point key="canvasLocation" x="2947" y="1625"/>
         </scene>
+        <!--Evaluation View Controller-->
+        <scene sceneID="1Lq-hX-IGK">
+            <objects>
+                <viewController storyboardIdentifier="EvaluationViewController" id="1aq-KA-OxN" customClass="EvaluationViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vza-eu-7bI"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLX-fJ-Med"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Op-TB-Dug" customClass="BackgroundView" customModule="WKCS" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SCENARIO ONE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="hs2-kp-0az" userLabel="label2">
+                                <rect key="frame" x="47" y="353" width="674" height="75"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue_key" translatesAutoresizingMaskIntoConstraints="NO" id="WvX-ig-8c7">
+                                <rect key="frame" x="153" y="150" width="417" height="187"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EVALUATION" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4n8-6e-Eeo" userLabel="label1">
+                                <rect key="frame" x="172" y="270" width="549" height="75"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcS-qh-RAU" userLabel="Proceed" customClass="UIShadowedButton" customModule="WKCS" customModuleProvider="target">
+                                <rect key="frame" x="225" y="886" width="319" height="68"/>
+                                <color key="backgroundColor" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-pD-OFU">
+                                <rect key="frame" x="28" y="514" width="712" height="353"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="52" id="yEC-Nf-Vuu">
+                                        <rect key="frame" x="0.0" y="28" width="712" height="52"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yEC-Nf-Vuu" id="UAd-R6-05x">
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is the question label..." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-ki-vtk">
+                                                    <rect key="frame" x="8" y="0.0" width="395" height="51"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="395" id="X0b-61-sk9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Is-eP-xi2" customClass="UIToggleButtonGroup" customModule="WKCS" customModuleProvider="target">
+                                                    <rect key="frame" x="411" y="0.0" width="275" height="51"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfR-TN-bgN" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="51" id="hsB-F8-KuH"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="1">
+                                                                <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorSelected">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorNormal">
+                                                                    <color key="value" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRe-aw-mUy" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
+                                                            <rect key="frame" x="56" y="0.0" width="51" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="51" id="v0T-8X-rCf"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="2">
+                                                                <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorSelected">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorNormal">
+                                                                    <color key="value" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWQ-nY-vD3" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
+                                                            <rect key="frame" x="112" y="0.0" width="51" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="51" id="SEP-KG-gSt"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="3">
+                                                                <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorSelected">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorNormal">
+                                                                    <color key="value" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCq-14-PSm" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
+                                                            <rect key="frame" x="168" y="0.0" width="51" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="51" id="cSG-Th-wwJ"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="4">
+                                                                <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorSelected">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorNormal">
+                                                                    <color key="value" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vq-YP-PFU" customClass="UIToggleButton" customModule="WKCS" customModuleProvider="target">
+                                                            <rect key="frame" x="224" y="0.0" width="51" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="51" id="C8z-lo-DAz"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" title="5">
+                                                                <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorSelected">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorNormal">
+                                                                    <color key="value" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColorHighlighted">
+                                                                    <color key="value" cyan="0.070000000000000007" magenta="0.47999999999999998" yellow="1" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="170" id="D51-Qf-ddG"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="D51-Qf-ddG"/>
+                                                        </mask>
+                                                    </variation>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0Is-eP-xi2" firstAttribute="top" secondItem="UAd-R6-05x" secondAttribute="top" id="QFJ-TX-2Ku"/>
+                                                <constraint firstItem="0Is-eP-xi2" firstAttribute="leading" secondItem="7n4-ki-vtk" secondAttribute="trailing" constant="8" id="Qwf-3L-KnP"/>
+                                                <constraint firstItem="7n4-ki-vtk" firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" id="YwC-YS-lM6"/>
+                                                <constraint firstItem="7n4-ki-vtk" firstAttribute="top" secondItem="0Is-eP-xi2" secondAttribute="top" id="c5J-pe-J9b"/>
+                                                <constraint firstAttribute="bottom" secondItem="0Is-eP-xi2" secondAttribute="bottom" id="d9T-g6-wld"/>
+                                                <constraint firstAttribute="trailing" secondItem="0Is-eP-xi2" secondAttribute="trailing" constant="26" id="jSI-oL-f2c"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zyI-hY-FNm" userLabel="description">
+                                <rect key="frame" x="28" y="428" width="712" height="85"/>
+                                <string key="text">Rate the following on a scale of 1 to 5, where 1 indicates needing significant improvement and 5 indicates superior performance.</string>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyholeButtonEnabled" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="backgroundView" destination="4Op-TB-Dug" id="DIc-uR-IVo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Uc-4o-AWV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3807" y="1625"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="blue_key" width="1512" height="566"/>
         <image name="lc" width="264" height="32"/>
         <image name="mustache" width="1800" height="1800"/>
         <image name="telephone booth" width="1800" height="1800"/>
