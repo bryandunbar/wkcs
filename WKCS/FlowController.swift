@@ -76,7 +76,20 @@ class FlowController : NSObject {
                 return nil
             }
             
-            return steps[idx + 1]
+            let step = steps[idx + 1]
+            
+            // Honor access control
+            if step.forAdminOnly {
+                if AppController.instance.isSGM {
+                    return step
+                } else {
+                    // Skip and Recurse
+                    self.currentStep = step
+                    return self.nextStep
+                }
+            } else {
+                return step
+            }
         }
     }
     
@@ -156,10 +169,7 @@ class FlowController : NSObject {
                             step.forAdminOnly = forAdminOnly
                         }
                         
-                        // Honor access control
-                        if !step.forAdminOnly || (step.forAdminOnly && AppController.instance.isSGM) {
-                            steps.append(step)
-                        }
+                        steps.append(step)
                     }
                 }
             }

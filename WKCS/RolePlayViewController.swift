@@ -30,7 +30,7 @@ class RolePlayViewController: ScenarioExplanationViewController, ClockTimerViewD
             rolePlayBegunButton.hidden = false
             proceedButton.hidden = true
         } else {
-            descriptionLabel?.text = "Tap \"Proceed to Debrief\" once the role play has been completed."
+            descriptionLabel?.text = "Tap \"Proceed\" once the role play has been completed."
             proceedButton.hidden = false
             rolePlayBegunButton.hidden = true
             self.clockTimerView.hidden = true
@@ -57,7 +57,7 @@ class RolePlayViewController: ScenarioExplanationViewController, ClockTimerViewD
     @IBAction func rolePlayBegunTapped(sender: AnyObject) {
         
         descriptionLabel?.fadeTransition(0.4)
-        descriptionLabel?.text = "Tap \"Proceed to Debrief\" once the role play has been completed."
+        descriptionLabel?.text = "Tap \"Proceed\" once the role play has been completed."
         
         self.clockTimerView.start()
         

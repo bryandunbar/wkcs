@@ -351,15 +351,15 @@
                                     <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proceed to the Something Or other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLq-UF-EyW">
-                                <rect key="frame" x="20" y="539" width="560" height="27"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="bw_footprints" translatesAutoresizingMaskIntoConstraints="NO" id="VX9-xF-Wy8">
+                                <rect key="frame" x="150" y="258" width="300" height="200"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Proceed to the Something Or other" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLq-UF-EyW">
+                                <rect key="frame" x="20" y="466" width="560" height="100"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="bw_footprints" translatesAutoresizingMaskIntoConstraints="NO" id="VX9-xF-Wy8">
-                                <rect key="frame" x="150" y="258" width="300" height="200"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                         <constraints>
@@ -373,7 +373,7 @@
                             <constraint firstItem="rLq-UF-EyW" firstAttribute="leading" secondItem="PLH-fR-kOs" secondAttribute="leading" constant="20" id="nK9-V0-iKv"/>
                             <constraint firstItem="VX9-xF-Wy8" firstAttribute="centerX" secondItem="PLH-fR-kOs" secondAttribute="centerX" id="oPg-si-I1p"/>
                             <constraint firstAttribute="trailing" secondItem="W16-lp-dIp" secondAttribute="trailing" constant="20" id="th1-RP-C59"/>
-                            <constraint firstItem="rLq-UF-EyW" firstAttribute="top" secondItem="VX9-xF-Wy8" secondAttribute="bottom" constant="81" id="wY4-0r-Hc0"/>
+                            <constraint firstItem="rLq-UF-EyW" firstAttribute="top" secondItem="VX9-xF-Wy8" secondAttribute="bottom" constant="8" id="wY4-0r-Hc0"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

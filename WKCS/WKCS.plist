@@ -268,5 +268,551 @@ click &quot;Proceed&quot; to review the evidence.</string>
 		<key>themeColor</key>
 		<string>7.0,48.0,100.0,7.0</string>
 	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>evidence_folder</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Discuss the Evidence</string>
+		<key>description</key>
+		<string>After discussing the evidence,
+click &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>7.0,48.0,100.0,7.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>RolePlayViewController</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>timerDuration</key>
+		<integer>2</integer>
+		<key>themeColor</key>
+		<string>7.0,48.0,100.0,7.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>typewriter</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Debrief</string>
+		<key>description</key>
+		<string>After conducting the debrief,
+tap &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>7.0,48.0,100.0,7.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>EvaluationViewController</string>
+		<key>nextButtonTitle</key>
+		<string>Submit</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Two</string>
+		<key>subtitle2</key>
+		<string>Evaluation</string>
+		<key>themeColor</key>
+		<string>7.0,48.0,100.0,7.0</string>
+		<key>questions</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>How well did the characters:</string>
+				<key>items</key>
+				<array>
+					<string>Create a positive, welcoming environment</string>
+					<string>Engage with every customer without being bossy</string>
+					<string>Ensure customer know where to go,
+what to expect and when-with positive breakaway points</string>
+					<string>Use positive language and body language</string>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>How well did the other associates:</string>
+				<key>items</key>
+				<array>
+					<string>Participate in the scenario discussions</string>
+				</array>
+			</dict>
+		</array>
+		<key>forAdminOnly</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ModalInterstitialViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>subtitle</key>
+		<string>New evidence has been found!</string>
+		<key>modal</key>
+		<true/>
+		<key>description</key>
+		<string>Proceed to the Dispense</string>
+		<key>nextButtonTitle</key>
+		<string>&apos;tap to close&apos;</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>scenario-3</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Three</string>
+		<key>subtitle2</key>
+		<string>Dispense</string>
+		<key>description</key>
+		<string>State the objective.
+            Explain the scenario.
+            Then click &quot;Proceed&quot;</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Find The clue</string>
+		<key>description</key>
+		<string>After finding the clue,
+            click &quot;Proceed&quot; to review the evidence.</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>scenario3_evidence</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>evidence_folder</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Discuss the Evidence</string>
+		<key>description</key>
+		<string>After discussing the evidence,
+            click &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>RolePlayViewController</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>timerDuration</key>
+		<integer>2</integer>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>typewriter</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Debrief</string>
+		<key>description</key>
+		<string>After conducting the debrief,
+            tap &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>EvaluationViewController</string>
+		<key>nextButtonTitle</key>
+		<string>Submit</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Three</string>
+		<key>subtitle2</key>
+		<string>Evaluation</string>
+		<key>themeColor</key>
+		<string>29.0,90.0,36.0,14.0</string>
+		<key>questions</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>How well did the characters:</string>
+				<key>items</key>
+				<array>
+					<string>Reinforce the glasses were ready when promised</string>
+					<string>Show genuine appreciation and courtesy</string>
+					<string>Celebrate the sale</string>
+					<string>Present the eyewear and educate the customer</string>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>How well did the other associates:</string>
+				<key>items</key>
+				<array>
+					<string>Participate in the scenario discussions</string>
+				</array>
+			</dict>
+		</array>
+		<key>forAdminOnly</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ModalInterstitialViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>subtitle</key>
+		<string>New evidence has been found!</string>
+		<key>modal</key>
+		<true/>
+		<key>description</key>
+		<string>Proceed Near the Lab</string>
+		<key>nextButtonTitle</key>
+		<string>&apos;tap to close&apos;</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>scenario-4</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Four</string>
+		<key>subtitle2</key>
+		<string>Near the Lab</string>
+		<key>description</key>
+		<string>State the objective.
+            Explain the scenario.
+            Then click &quot;Proceed&quot;</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Find The clue</string>
+		<key>description</key>
+		<string>After finding the clue,
+            click &quot;Proceed&quot; to review the evidence.</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>scenario4_evidence</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>evidence_folder</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Discuss the Evidence</string>
+		<key>description</key>
+		<string>After discussing the evidence,
+            click &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>RolePlayViewController</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>timerDuration</key>
+		<integer>2</integer>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>typewriter</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Debrief</string>
+		<key>description</key>
+		<string>After conducting the debrief,
+            tap &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>EvaluationViewController</string>
+		<key>nextButtonTitle</key>
+		<string>Submit</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Four</string>
+		<key>subtitle2</key>
+		<string>Evaluation</string>
+		<key>themeColor</key>
+		<string>58.0,25.0,100.0,8.0</string>
+		<key>questions</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>How well did the characters:</string>
+				<key>items</key>
+				<array>
+					<string>Avoid deflecting, defending, or denying</string>
+					<string>Convey a sense of urgency in getting to a solution</string>
+					<string>Express empathy and understanding of the customer’s frustration</string>
+					<string> Reinforce the lab’s expertise, experience, and quality focus</string>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>How well did the other associates:</string>
+				<key>items</key>
+				<array>
+					<string>Participate in the scenario discussions</string>
+				</array>
+			</dict>
+		</array>
+		<key>forAdminOnly</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ModalInterstitialViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>subtitle</key>
+		<string>New evidence has been found!</string>
+		<key>modal</key>
+		<true/>
+		<key>description</key>
+		<string>Proceed to the OD Office</string>
+		<key>nextButtonTitle</key>
+		<string>&apos;tap to close&apos;</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>scenario-5</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Five</string>
+		<key>subtitle2</key>
+		<string>OD Office</string>
+		<key>description</key>
+		<string>State the objective.
+        Explain the scenario.
+        Then click &quot;Proceed&quot;</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Find The clue</string>
+		<key>description</key>
+		<string>After finding the clue,
+        click &quot;Proceed&quot; to review the evidence.</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>scenario5_evidence_1</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed to view Evidence #2</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>LargeImageViewController</string>
+		<key>imageName</key>
+		<string>scenario5_evidence_2</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed to discuss the evidence</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>evidence_folder</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Discuss the Evidence</string>
+		<key>description</key>
+		<string>After discussing the evidence,
+            click &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>RolePlayViewController</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>timerDuration</key>
+		<integer>2</integer>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ScenarioExplanationViewController</string>
+		<key>imageName</key>
+		<string>typewriter</string>
+		<key>nextButtonTitle</key>
+		<string>Proceed</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Debrief</string>
+		<key>description</key>
+		<string>After conducting the debrief,
+        tap &quot;Proceed&quot;.</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>EvaluationViewController</string>
+		<key>nextButtonTitle</key>
+		<string>Submit</string>
+		<key>title</key>
+		<string>Who Killed C. Service?</string>
+		<key>subtitle</key>
+		<string>Scenario Five</string>
+		<key>subtitle2</key>
+		<string>Evaluation</string>
+		<key>themeColor</key>
+		<string>60.0,68.0,6.0,18.0</string>
+		<key>questions</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>How well did the characters:</string>
+				<key>items</key>
+				<array>
+					<string>Maintain open and inquisitive body language</string>
+					<string>Make eye contact and smile</string>
+					<string>Do more listening than talking</string>
+					<string>Ask relevant, quality open-ended questions</string>
+				</array>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>How well did the other associates:</string>
+				<key>items</key>
+				<array>
+					<string>Participate in the scenario discussions</string>
+				</array>
+			</dict>
+		</array>
+		<key>forAdminOnly</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>viewControllerIdentifier</key>
+		<string>ModalInterstitialViewController</string>
+		<key>imageName</key>
+		<string>bw_footprints</string>
+		<key>subtitle</key>
+		<string>CONGRATULATIONS!</string>
+		<key>modal</key>
+		<true/>
+		<key>description</key>
+		<string>You now have enough evidence to determine who killed C. Service.
+
+Proceed to the Closing Debrief</string>
+		<key>nextButtonTitle</key>
+		<string>&apos;tap to close&apos;</string>
+	</dict>
 </array>
 </plist>
