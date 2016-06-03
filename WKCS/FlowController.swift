@@ -21,6 +21,9 @@ struct Step : CustomStringConvertible {
     /** Presentation style **/
     var modal:Bool = false
     
+    /** Menuing **/
+    var menuTitle:String? // If set, this step will be accessible to jump to from the menu
+    
     /** Properties on the background view **/
     var title:String?
     var footerVisible:Bool = true
@@ -126,6 +129,10 @@ class FlowController : NSObject {
                         if let title = dict["title"] as? String {
                             step.title = title
                         }
+                        
+                        
+                        step.menuTitle = dict["menuTitle"] as? String
+                        
                         if let subtitle = dict["subtitle"] as? String {
                             step.subtitle = subtitle
                         }
@@ -188,25 +195,29 @@ class FlowController : NSObject {
     
     func goToNextStep(animated animated:Bool) {
 
+        if let nextStep = self.nextStep {
+            self.goToStep(nextStep, animated: animated)
+        }
+        
+    }
+    
+    func goToStep(step:Step, animated:Bool) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         let navigationController = appDelegate.rootViewController
-
-        if let nextStep = self.nextStep {
-            
-            let viewController = getViewControllerForStep(nextStep)
-            
-            // Dismiss modal if need be
-            if currentStep.modal {
-                navigationController.dismissViewControllerAnimated(true, completion: {
-                    self.presentViewController(viewController, modal: nextStep.modal, animated: animated)
-                })
-            } else {
-                self.presentViewController(viewController, modal: nextStep.modal, animated: animated)
-            }
-            
-            // Update the current step
-            self.currentStep = nextStep
+        
+        let viewController = getViewControllerForStep(step)
+        
+        // Dismiss modal if need be
+        if currentStep.modal {
+            navigationController.dismissViewControllerAnimated(true, completion: {
+                self.presentViewController(viewController, modal: step.modal, animated: animated)
+            })
+        } else {
+            self.presentViewController(viewController, modal: step.modal, animated: animated)
         }
+        
+        // Update the current step
+        self.currentStep = step
         
     }
     

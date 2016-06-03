@@ -28,6 +28,11 @@
 		E39501C71CFF656300CB9209 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501C61CFF656200CB9209 /* QuestionTableViewCell.swift */; };
 		E39501C91CFF677800CB9209 /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501C81CFF677800CB9209 /* QuestionHeaderTableViewCell.swift */; };
 		E39501CB1D0110E300CB9209 /* ModalInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */; };
+		E39501D21D01BB0B00CB9209 /* SlidingOverlayAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501CF1D01BB0B00CB9209 /* SlidingOverlayAnimator.swift */; };
+		E39501D31D01BB0B00CB9209 /* SlidingOverlayPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501D01D01BB0B00CB9209 /* SlidingOverlayPresentationController.swift */; };
+		E39501D41D01BB0B00CB9209 /* SlidingOverlayTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501D11D01BB0B00CB9209 /* SlidingOverlayTransitioningDelegate.swift */; };
+		E39501D61D01BB3300CB9209 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501D51D01BB3300CB9209 /* MenuViewController.swift */; };
+		E39501D81D01C47300CB9209 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501D71D01C47300CB9209 /* MenuTableViewCell.swift */; };
 		E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */; };
 		E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */; };
 		E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F93ED61CECA48D00CCBFFF /* Main.storyboard */; };
@@ -65,6 +70,11 @@
 		E39501C61CFF656200CB9209 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		E39501C81CFF677800CB9209 /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterstitialViewController.swift; sourceTree = "<group>"; };
+		E39501CF1D01BB0B00CB9209 /* SlidingOverlayAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayAnimator.swift; sourceTree = "<group>"; };
+		E39501D01D01BB0B00CB9209 /* SlidingOverlayPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayPresentationController.swift; sourceTree = "<group>"; };
+		E39501D11D01BB0B00CB9209 /* SlidingOverlayTransitioningDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidingOverlayTransitioningDelegate.swift; sourceTree = "<group>"; };
+		E39501D51D01BB3300CB9209 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E39501D71D01C47300CB9209 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		E3F93ECF1CECA48D00CCBFFF /* WKCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +121,16 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		E39501CE1D01BAF200CB9209 /* Custom View Controller Presentations */ = {
+			isa = PBXGroup;
+			children = (
+				E39501CF1D01BB0B00CB9209 /* SlidingOverlayAnimator.swift */,
+				E39501D01D01BB0B00CB9209 /* SlidingOverlayPresentationController.swift */,
+				E39501D11D01BB0B00CB9209 /* SlidingOverlayTransitioningDelegate.swift */,
+			);
+			name = "Custom View Controller Presentations";
+			sourceTree = "<group>";
+		};
 		E3F93EC61CECA48C00CCBFFF = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +151,7 @@
 		E3F93ED11CECA48D00CCBFFF /* WKCS */ = {
 			isa = PBXGroup;
 			children = (
+				E39501CE1D01BAF200CB9209 /* Custom View Controller Presentations */,
 				E353DD7C1CEF4BEE00D18932 /* Model */,
 				E353DD6F1CEF480300D18932 /* Data */,
 				E3F93EF01CEDEF9300CCBFFF /* Audio */,
@@ -162,6 +183,7 @@
 				E353DD871CF00A9F00D18932 /* ClockTimerView.swift */,
 				E39501C61CFF656200CB9209 /* QuestionTableViewCell.swift */,
 				E39501C81CFF677800CB9209 /* QuestionHeaderTableViewCell.swift */,
+				E39501D71D01C47300CB9209 /* MenuTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -178,6 +200,7 @@
 				E353DD8B1CF00FEC00D18932 /* RolePlayViewController.swift */,
 				E39501BF1CFF376E00CB9209 /* EvaluationViewController.swift */,
 				E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */,
+				E39501D51D01BB3300CB9209 /* MenuViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -271,11 +294,15 @@
 			files = (
 				E39501CB1D0110E300CB9209 /* ModalInterstitialViewController.swift in Sources */,
 				E353DD771CEF49C000D18932 /* LargeImageViewController.swift in Sources */,
+				E39501D41D01BB0B00CB9209 /* SlidingOverlayTransitioningDelegate.swift in Sources */,
+				E39501D61D01BB3300CB9209 /* MenuViewController.swift in Sources */,
 				E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */,
 				E353DD8C1CF00FEC00D18932 /* RolePlayViewController.swift in Sources */,
 				E353DD791CEF4A3F00D18932 /* BaseViewController.swift in Sources */,
 				E3F93EE61CECA4E800CCBFFF /* NibDesignable.swift in Sources */,
 				E353DDAE1CF74F5E00D18932 /* AppController.swift in Sources */,
+				E39501D31D01BB0B00CB9209 /* SlidingOverlayPresentationController.swift in Sources */,
+				E39501D81D01C47300CB9209 /* MenuTableViewCell.swift in Sources */,
 				E39501C01CFF376E00CB9209 /* EvaluationViewController.swift in Sources */,
 				E3F93EEA1CECA55B00CCBFFF /* BackgroundView.swift in Sources */,
 				E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */,
@@ -289,6 +316,7 @@
 				E353DD6A1CEE165A00D18932 /* PhotoSliderViewController.swift in Sources */,
 				E39501C41CFF39AE00CB9209 /* UIToggleButton.swift in Sources */,
 				E353DD6E1CEE3EDB00D18932 /* UIViewExtensions.swift in Sources */,
+				E39501D21D01BB0B00CB9209 /* SlidingOverlayAnimator.swift in Sources */,
 				E39501C91CFF677800CB9209 /* QuestionHeaderTableViewCell.swift in Sources */,
 				E3F93EFA1CEE0CEA00CCBFFF /* UIRoundedCornerView.swift in Sources */,
 				E353DD801CEF72EB00D18932 /* ScenarioExplanationViewController.swift in Sources */,
