@@ -18,6 +18,9 @@ struct Step : CustomStringConvertible {
         self.viewControllerIdentifier = viewControllerIdentifier
     }
     
+    /** Presentation style **/
+    var modal:Bool = false
+    
     /** Properties on the background view **/
     var title:String?
     var footerVisible:Bool = true
@@ -53,6 +56,19 @@ class FlowController : NSObject {
         }
     }
     
+    
+    var previousStep:Step? {
+        get {
+            let idx = self.currentStep.idx
+            if idx <= 0 {
+                return nil
+            }
+            
+            return steps[idx - 1]
+        }
+        
+    }
+    
     var nextStep:Step? {
         get {
             let idx = self.currentStep.idx
@@ -80,7 +96,7 @@ class FlowController : NSObject {
                 for (idx, obj) in arr.enumerate() {
                     if let dict = obj as? NSDictionary {
                         
-                        var step:Step = Step(idx: idx,
+                        var step:Step = Step(idx: self.steps.count,
                                              viewControllerIdentifier: dict["viewControllerIdentifier"] as! String)
                         
                         
@@ -132,8 +148,18 @@ class FlowController : NSObject {
                             step.questions = questions
                         }
                         
-                    
-                        steps.append(step)
+                        if let modal = dict["modal"] as? Bool {
+                            step.modal = modal
+                        }
+                        
+                        if let forAdminOnly = dict["forAdminOnly"] as? Bool {
+                            step.forAdminOnly = forAdminOnly
+                        }
+                        
+                        // Honor access control
+                        if !step.forAdminOnly || (step.forAdminOnly && AppController.instance.isSGM) {
+                            steps.append(step)
+                        }
                     }
                 }
             }
@@ -151,16 +177,42 @@ class FlowController : NSObject {
     }
     
     func goToNextStep(animated animated:Bool) {
-        
+
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let navigationController = appDelegate.rootViewController
+
         if let nextStep = self.nextStep {
-            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            let navigationController = appDelegate.window!.rootViewController as! UINavigationController
             
+            let viewController = getViewControllerForStep(nextStep)
+            
+            // Dismiss modal if need be
+            if currentStep.modal {
+                navigationController.dismissViewControllerAnimated(true, completion: {
+                    self.presentViewController(viewController, modal: nextStep.modal, animated: animated)
+                })
+            } else {
+                self.presentViewController(viewController, modal: nextStep.modal, animated: animated)
+            }
+            
+            // Update the current step
             self.currentStep = nextStep
-            navigationController.pushViewController(getViewControllerForStep(nextStep), animated: animated)
-            
         }
         
+    }
+    
+    private func presentViewController(viewController:UIViewController, modal:Bool, animated:Bool) {
+        
+        // We'll need the navigation controller
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let navigationController = appDelegate.rootViewController
+        
+        if modal {
+            viewController.modalPresentationStyle = .FormSheet
+            viewController.modalTransitionStyle = .CoverVertical
+            navigationController.presentViewController(viewController, animated: animated, completion: nil)
+        } else {
+            navigationController.pushViewController(viewController, animated: animated)
+        }
     }
     
     func CMYKtoRGB(c : CGFloat, m : CGFloat, y : CGFloat, k : CGFloat) -> (r : CGFloat, g : CGFloat, b : CGFloat) {

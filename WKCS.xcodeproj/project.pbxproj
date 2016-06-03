@@ -27,6 +27,7 @@
 		E39501C41CFF39AE00CB9209 /* UIToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501C21CFF39AE00CB9209 /* UIToggleButton.swift */; };
 		E39501C71CFF656300CB9209 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501C61CFF656200CB9209 /* QuestionTableViewCell.swift */; };
 		E39501C91CFF677800CB9209 /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501C81CFF677800CB9209 /* QuestionHeaderTableViewCell.swift */; };
+		E39501CB1D0110E300CB9209 /* ModalInterstitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */; };
 		E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */; };
 		E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */; };
 		E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F93ED61CECA48D00CCBFFF /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 		E39501C21CFF39AE00CB9209 /* UIToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToggleButton.swift; sourceTree = "<group>"; };
 		E39501C61CFF656200CB9209 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		E39501C81CFF677800CB9209 /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalInterstitialViewController.swift; sourceTree = "<group>"; };
 		E3F93ECF1CECA48D00CCBFFF /* WKCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				E353DD7F1CEF72EB00D18932 /* ScenarioExplanationViewController.swift */,
 				E353DD8B1CF00FEC00D18932 /* RolePlayViewController.swift */,
 				E39501BF1CFF376E00CB9209 /* EvaluationViewController.swift */,
+				E39501CA1D0110E300CB9209 /* ModalInterstitialViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39501CB1D0110E300CB9209 /* ModalInterstitialViewController.swift in Sources */,
 				E353DD771CEF49C000D18932 /* LargeImageViewController.swift in Sources */,
 				E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */,
 				E353DD8C1CF00FEC00D18932 /* RolePlayViewController.swift in Sources */,

@@ -23,6 +23,10 @@ class AnswerTheCallViewController: BaseViewController, AVAudioPlayerDelegate {
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
+    }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
     

@@ -322,6 +322,72 @@
             </objects>
             <point key="canvasLocation" x="4669" y="485"/>
         </scene>
+        <!--Modal Interstitial View Controller-->
+        <scene sceneID="y8i-K0-Wd5">
+            <objects>
+                <viewController storyboardIdentifier="ModalInterstitialViewController" id="KBe-hJ-gP3" customClass="ModalInterstitialViewController" customModule="WKCS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4LH-JK-3xM"/>
+                        <viewControllerLayoutGuide type="bottom" id="gnK-qS-NhL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PLH-fR-kOs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW EVIDENCE HAS BEEN FOUND!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isH-rL-cNE">
+                                <rect key="frame" x="20" y="109" width="560" height="120"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W16-lp-dIp">
+                                <rect key="frame" x="465" y="20" width="115" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="H0e-S9-bKe"/>
+                                    <constraint firstAttribute="width" constant="115" id="Q4l-GL-Ry8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <state key="normal" title="`tap to close'">
+                                    <color key="titleColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proceed to the Something Or other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLq-UF-EyW">
+                                <rect key="frame" x="20" y="539" width="560" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cyan="0.0" magenta="0.0" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" image="bw_footprints" translatesAutoresizingMaskIntoConstraints="NO" id="VX9-xF-Wy8">
+                                <rect key="frame" x="150" y="258" width="300" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" cyan="0.47999999999999998" magenta="0.46000000000000002" yellow="0.47999999999999998" black="0.089999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gnK-qS-NhL" firstAttribute="top" secondItem="rLq-UF-EyW" secondAttribute="bottom" constant="34" id="7jC-gb-iJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="isH-rL-cNE" secondAttribute="trailing" constant="20" id="BGt-gZ-PAK"/>
+                            <constraint firstItem="VX9-xF-Wy8" firstAttribute="top" secondItem="isH-rL-cNE" secondAttribute="bottom" constant="29" id="FDD-RL-vp5"/>
+                            <constraint firstItem="isH-rL-cNE" firstAttribute="leading" secondItem="PLH-fR-kOs" secondAttribute="leading" constant="20" id="PZX-tD-ij2"/>
+                            <constraint firstAttribute="trailing" secondItem="rLq-UF-EyW" secondAttribute="trailing" constant="20" id="S5t-h1-bN6"/>
+                            <constraint firstItem="W16-lp-dIp" firstAttribute="top" secondItem="4LH-JK-3xM" secondAttribute="bottom" constant="20" id="UCX-b4-FKQ"/>
+                            <constraint firstItem="isH-rL-cNE" firstAttribute="top" secondItem="W16-lp-dIp" secondAttribute="bottom" constant="59" id="dOS-L7-iNb"/>
+                            <constraint firstItem="rLq-UF-EyW" firstAttribute="leading" secondItem="PLH-fR-kOs" secondAttribute="leading" constant="20" id="nK9-V0-iKv"/>
+                            <constraint firstItem="VX9-xF-Wy8" firstAttribute="centerX" secondItem="PLH-fR-kOs" secondAttribute="centerX" id="oPg-si-I1p"/>
+                            <constraint firstAttribute="trailing" secondItem="W16-lp-dIp" secondAttribute="trailing" constant="20" id="th1-RP-C59"/>
+                            <constraint firstItem="rLq-UF-EyW" firstAttribute="top" secondItem="VX9-xF-Wy8" secondAttribute="bottom" constant="81" id="wY4-0r-Hc0"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <modalFormSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="rLq-UF-EyW" id="qKC-JZ-iU0"/>
+                        <outlet property="imageView" destination="VX9-xF-Wy8" id="RxU-DE-EKO"/>
+                        <outlet property="subtitleLabel" destination="isH-rL-cNE" id="FcP-qF-a4B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfS-dX-4oV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4812" y="1568"/>
+        </scene>
         <!--Scenario Explanation View Controller-->
         <scene sceneID="gHG-QX-JP1">
             <objects>
@@ -447,6 +513,7 @@ Then click "Proceed"</string>
                         <outlet property="descriptionLabel" destination="GBT-tu-5Ds" id="pA3-vw-G5c"/>
                         <outlet property="proceedButton" destination="Nvv-OL-QN8" id="6fC-Gh-paV"/>
                         <outlet property="rolePlayBegunButton" destination="27P-He-ng6" id="l8v-B9-w9H"/>
+                        <outlet property="subtitleLabel" destination="4mv-nq-jPa" id="Iic-RN-zkU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gzP-c6-8iE" sceneMemberID="firstResponder"/>
@@ -676,6 +743,7 @@ Then click "Proceed"</string>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="backgroundView" destination="4Op-TB-Dug" id="DIc-uR-IVo"/>
+                        <outlet property="submitButton" destination="vcS-qh-RAU" id="2t9-3r-6af"/>
                         <outlet property="subtitle2Label" destination="4n8-6e-Eeo" id="QKG-Sc-0hV"/>
                         <outlet property="subtitleLabel" destination="hs2-kp-0az" id="oll-1m-r5D"/>
                         <outlet property="tableView" destination="y4c-pD-OFU" id="nTB-oa-dih"/>
@@ -688,6 +756,7 @@ Then click "Proceed"</string>
     </scenes>
     <resources>
         <image name="blue_key" width="1512" height="566"/>
+        <image name="bw_footprints" width="1800" height="1800"/>
         <image name="lc" width="264" height="32"/>
         <image name="mustache" width="1800" height="1800"/>
         <image name="telephone booth" width="1800" height="1800"/>

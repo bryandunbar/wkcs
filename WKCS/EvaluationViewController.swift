@@ -11,6 +11,7 @@ import UIKit
 class EvaluationViewController: ScenarioExplanationViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var submitButton: UIShadowedButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,11 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
         // Dispose of any resources that can be recreated.
     }
     
+    override var nextButton: UIButton? {
+        get {
+            return self.submitButton
+        }
+    }
     
     override func configureView() {
         super.configureView()
@@ -69,6 +75,14 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
         
         return 0
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor.whiteColor()
+        } else {
+            cell.backgroundColor = Theme.AlternateRowColor
+        }
     }
     
     func configureCell(cell:QuestionTableViewCell, indexPath:NSIndexPath) {

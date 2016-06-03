@@ -11,6 +11,7 @@ import UIKit
 
 struct Theme {
     static var PinkColor = UIColor(red: 169/255, green: 36/255, blue: 57/255, alpha: 1.0)
+    static var AlternateRowColor = UIColor(red: 238.0/255, green: 233.0/255, blue: 227.0/255, alpha: 1.0)
 }
 
 @objc class AppController: NSObject /*, NSCoding */ {

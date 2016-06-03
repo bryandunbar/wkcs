@@ -10,7 +10,7 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
-    @IBOutlet var backgroundView: BackgroundView!
+    @IBOutlet var backgroundView: BackgroundView?
     
     var step:Step!
     override func viewDidLoad() {
@@ -36,10 +36,10 @@ class BaseViewController: UIViewController {
             button.setTitle(step.nextButtonTitle, forState: .Normal)
         }
         
-        self.backgroundView.title = self.step.title
-        self.backgroundView.footerVisible = self.step.footerVisible
-        self.backgroundView.keyholeButtonEnabled = self.step.keyholeButtonEnabled
-        self.backgroundView.keyholeButtonVisible = self.step.keyholeButtonVisible
+        self.backgroundView?.title = self.step.title
+        self.backgroundView?.footerVisible = self.step.footerVisible
+        self.backgroundView?.keyholeButtonEnabled = self.step.keyholeButtonEnabled
+        self.backgroundView?.keyholeButtonVisible = self.step.keyholeButtonVisible
     }
     
     @IBAction func next(sender:AnyObject) {
