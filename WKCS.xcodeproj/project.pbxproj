@@ -39,6 +39,7 @@
 		E39501F91D05F83C00CB9209 /* EvaluationResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501F81D05F83C00CB9209 /* EvaluationResponseData.swift */; };
 		E39501FB1D085C5C00CB9209 /* LeaderboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501FA1D085C5C00CB9209 /* LeaderboardViewController.swift */; };
 		E39501FD1D0EF2DD00CB9209 /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39501FC1D0EF2DD00CB9209 /* LeaderboardTableViewCell.swift */; };
+		E39501FF1D0F01AC00CB9209 /* ship_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E39501FE1D0F01AC00CB9209 /* ship_bell.mp3 */; };
 		E3F93ED31CECA48D00CCBFFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */; };
 		E3F93ED51CECA48D00CCBFFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */; };
 		E3F93ED81CECA48D00CCBFFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F93ED61CECA48D00CCBFFF /* Main.storyboard */; };
@@ -159,6 +160,7 @@
 		E39501F81D05F83C00CB9209 /* EvaluationResponseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvaluationResponseData.swift; sourceTree = "<group>"; };
 		E39501FA1D085C5C00CB9209 /* LeaderboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardViewController.swift; sourceTree = "<group>"; };
 		E39501FC1D0EF2DD00CB9209 /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
+		E39501FE1D0F01AC00CB9209 /* ship_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ship_bell.mp3; sourceTree = "<group>"; };
 		E3F93ECF1CECA48D00CCBFFF /* WKCS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKCS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F93ED21CECA48D00CCBFFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F93ED41CECA48D00CCBFFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		E3F93EF01CEDEF9300CCBFFF /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				E39501FE1D0F01AC00CB9209 /* ship_bell.mp3 */,
 				E3F93EF11CEDEFA200CCBFFF /* the-call.m4a */,
 				E3F93EEE1CED691000CCBFFF /* phone-ringing.mp3 */,
 			);
@@ -441,6 +444,7 @@
 				E3F93EDD1CECA48D00CCBFFF /* LaunchScreen.storyboard in Resources */,
 				E3F93EF21CEDEFA200CCBFFF /* the-call.m4a in Resources */,
 				E353DD8A1CF00D1200D18932 /* Assets.xcassets in Resources */,
+				E39501FF1D0F01AC00CB9209 /* ship_bell.mp3 in Resources */,
 				E353DD751CEF48E000D18932 /* WKCS.plist in Resources */,
 				E3F93EE81CECA50800CCBFFF /* BackgroundView.xib in Resources */,
 				E353DD711CEF482100D18932 /* ScenarioPhotos.xcassets in Resources */,

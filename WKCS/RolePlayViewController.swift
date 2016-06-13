@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class RolePlayViewController: ScenarioExplanationViewController, ClockTimerViewDelegate {
 
@@ -15,10 +16,16 @@ class RolePlayViewController: ScenarioExplanationViewController, ClockTimerViewD
     
     @IBOutlet weak var proceedButton: UIShadowedButton!
     
+    var player:AVAudioPlayer?
+
     override var nextButton: UIButton? {
         get {
             return self.proceedButton
         }
+    }
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
     }
     override func configureView() {
         super.configureView()
@@ -42,6 +49,21 @@ class RolePlayViewController: ScenarioExplanationViewController, ClockTimerViewD
     
     func timerExpired(timerView: ClockTimerView) {
         proceedButton.setHidden(false, animated: true, completion: nil)
+        
+        if self.player != nil {
+            if self.player!.playing {
+                self.player!.stop()
+            }
+        }
+        
+        let sound =  NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("ship_bell", ofType: "mp3")!)
+        do {
+            try self.player = AVAudioPlayer(contentsOfURL: sound)
+            self.player!.prepareToPlay()
+            self.player!.play()
+        }  catch _ {
+            
+        }
     }
 
     /*

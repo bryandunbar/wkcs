@@ -101,7 +101,7 @@ class LeaderboardViewController: BaseViewController, UITableViewDelegate, UITabl
         if let store_number = location["store_number"] as? String {
             if store_number == AppController.instance.location!["store_number"] as! String {
                 cell.layer.borderColor = Theme.OrangeColor.CGColor
-                cell.layer.borderWidth = 1 .0
+                cell.layer.borderWidth = 1.0
             } else {
                 cell.layer.borderWidth = 0.0
             }
