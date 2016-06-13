@@ -12,6 +12,8 @@ import UIKit
 struct Theme {
     static var PinkColor = UIColor(red: 169/255, green: 36/255, blue: 57/255, alpha: 1.0)
     static var AlternateRowColor = UIColor(red: 238.0/255, green: 233.0/255, blue: 227.0/255, alpha: 1.0)
+    static var OrangeColor = UIColor(red: 216/255, green: 138/255, blue: 33/255, alpha: 1.0)
+    
 }
 
 @objc class AppController: NSObject /*, NSCoding */ {
@@ -52,16 +54,33 @@ struct Theme {
             return userDefaults.integerForKey("savedStep")
         }
     }
-
     
-    var user:String? {
+    var eventId:Int {
         set {
-            userDefaults.setObject(newValue, forKey: "savedStep")
+            userDefaults.setInteger(newValue, forKey: "eventId")
             userDefaults.synchronize()
         }
         
         get {
-            return userDefaults.objectForKey("savedStep") as? String
+            return userDefaults.integerForKey("eventId")
+        }
+    }
+
+    
+    var location:[String:AnyObject]? {
+        set {
+            userDefaults.setObject(newValue?["store_number"] as? String, forKey: "store_number")
+            userDefaults.setObject(newValue?["region"] as? String, forKey: "region")
+            userDefaults.setObject(newValue?["zone"] as? String, forKey: "zone")
+            userDefaults.synchronize()
+        }
+        
+        get {
+            return [
+                "store_number": userDefaults.stringForKey("store_number")!,
+                "region":userDefaults.stringForKey("region")!,
+                "zone":userDefaults.stringForKey("zone")!
+            ]
         }
     }
     var isSGM:Bool {

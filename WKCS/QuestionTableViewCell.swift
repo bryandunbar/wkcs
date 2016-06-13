@@ -28,4 +28,7 @@ class QuestionTableViewCell: UITableViewCell {
             self.questionLabel.text = question
         }
     }
+    
+    
+    
 }

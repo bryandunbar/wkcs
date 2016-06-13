@@ -10,4 +10,8 @@ import Foundation
 
 struct Constants {
     static let NEXT_BUTTON_TAG = 10001
+    static let LEADERBOARD_STEP_IDX = -1
+    
+    /** API **/
+    static let API_ENDPOINT = "http://localhost:8080/api/v1/"
 }

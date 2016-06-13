@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Alamofire
 
-class EvaluationViewController: ScenarioExplanationViewController, UITableViewDelegate, UITableViewDataSource {
+class EvaluationViewController: ScenarioExplanationViewController, UITableViewDelegate, UITableViewDataSource, UIToggleButtonGroupDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var submitButton: UIShadowedButton!
+    var responseData:EvaluationResponseData!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let evaluationQuestions = self.step.questions![0]["items"] as! [String]
+        let participationQuestions = self.step.questions![1]["items"] as! [String]
+        responseData = EvaluationResponseData(evaluationResponseCount: evaluationQuestions.count, participationResponseCount: participationQuestions.count)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -44,6 +51,37 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    override func next(sender:AnyObject) {
+        
+        let params:[String:AnyObject] = [
+            "event_id":AppController.instance.eventId,
+            "username":AppController.instance.location!["store_number"]!,
+            "challenge_id":self.step.backendUUID!,
+            "response_data":self.responseData.asDictionary()
+        ]
+        
+        
+        Alamofire.request(.POST, Constants.API_ENDPOINT + "postChallengeResult", parameters:params, encoding: .JSON)
+            .validate()
+            .responseJSON { response in
+                debugPrint(response)
+                
+                if let JSON = response.result.value {
+                    let status = JSON["status"] as! Bool
+                    if status {
+                        super.next(sender) // Let the super class move us on
+                    } else {
+                        self.showError(JSON["error"] as! String, handler: nil)
+                    }
+                }
+                
+        }
+    }
+    
+    
+    // MARK: - UITableView DataSource and Delegate
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! QuestionHeaderTableViewCell
@@ -89,7 +127,29 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
         let obj = self.step.questions![indexPath.section]
         let items = obj["items"] as! [String]
         cell.question = items[indexPath.row]
+        cell.toggleButtonGroup.delegate = self
         
+        if indexPath.section == 0 {
+            cell.toggleButtonGroup.selectedIndex = self.responseData.evaluationResponses[indexPath.row] - 1
+        } else {
+            cell.toggleButtonGroup.selectedIndex = self.responseData.participationResponses[indexPath.row] - 1
+        }
+    }
+    
+    func buttonGroup(group: UIToggleButtonGroup, didSelectIndex newIndex: Int, previousIndex: Int) {
+        
+        // Get index path of row with tapped button
+        let center:CGPoint = group.center
+        let rootViewPoint:CGPoint = group.superview!.convertPoint(center, toView: self.tableView)
+        let indexPath:NSIndexPath = self.tableView.indexPathForRowAtPoint(rootViewPoint)!
+
+        if indexPath.section == 0 {
+            self.responseData.evaluationResponses[indexPath.row] = newIndex + 1
+        } else {
+            self.responseData.participationResponses[indexPath.row] = newIndex + 1
+        }
+        
+        self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
     }
     
 }

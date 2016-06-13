@@ -173,6 +173,8 @@ tap &quot;Proceed&quot;.</string>
 		<string>Evaluation</string>
 		<key>themeColor</key>
 		<string>100.0,49.0,41.0,0.0</string>
+		<key>backendUUID</key>
+		<string>138f148af7144ef5adff41d84bda8033</string>
 		<key>questions</key>
 		<array>
 			<dict>
@@ -814,7 +816,7 @@ what to expect and when-with positive breakaway points</string>
 		<key>viewControllerIdentifier</key>
 		<string>ModalInterstitialViewController</string>
 		<key>imageName</key>
-		<string>bw_footprints</string>
+		<string>briefcase</string>
 		<key>subtitle</key>
 		<string>CONGRATULATIONS!</string>
 		<key>modal</key>

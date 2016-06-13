@@ -18,6 +18,15 @@ class UIToggleButtonGroup: UIStackView {
     var delegate:UIToggleButtonGroupDelegate?
     var selectedIndex:Int = -1 {
         didSet {
+
+            // Update states
+            for (i, view) in self.arrangedSubviews.enumerate() {
+                if let button = view as? UIButton {
+                    button.selected = (i == selectedIndex)
+                }
+            }
+            self.setNeedsDisplay()
+            
             self.delegate?.buttonGroup?(self, didSelectIndex: selectedIndex, previousIndex:oldValue)
         }
     }
@@ -40,28 +49,17 @@ class UIToggleButtonGroup: UIStackView {
         for view:UIView in self.arrangedSubviews {
             
             if let button = view as? UIButton {
-                button.addTarget(self, action: Selector("touchUpInside:"), forControlEvents: .TouchUpInside)
+                button.addTarget(self, action: #selector(touchUpInside), forControlEvents: .TouchUpInside)
             }
         }
     }
     
     func touchUpInside(sender:UIButton) {
-        // Toggle the oters
-        for (i, view) in self.arrangedSubviews.enumerate() {
-            
-            if let button = view as? UIButton {
-                if button != sender && button.selected {
-                    button.selected = false
-                }
-            }
-        }
-        
         if let selectedIndex = self.arrangedSubviews.indexOf(sender) {
             self.selectedIndex = selectedIndex
         } else {
             self.selectedIndex = -1
         }
-        
     }
 
 

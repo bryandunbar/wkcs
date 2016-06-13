@@ -43,6 +43,7 @@ struct Step : CustomStringConvertible {
     var images:[String]?
     var timerDuration:NSTimeInterval?
     var questions:[[String:AnyObject]]?
+    var backendUUID:String?
     
     var description: String {
         return "Step \(idx)"
@@ -133,6 +134,10 @@ class FlowController : NSObject {
                         
                         step.menuTitle = dict["menuTitle"] as? String
                         
+                        if let backendUUID = dict["backendUUID"] as? String {
+                            step.backendUUID = backendUUID
+                        }
+                        
                         if let subtitle = dict["subtitle"] as? String {
                             step.subtitle = subtitle
                         }
@@ -217,7 +222,9 @@ class FlowController : NSObject {
         }
         
         // Update the current step
-        self.currentStep = step
+        if step.idx != Constants.LEADERBOARD_STEP_IDX {
+            self.currentStep = step
+        }
         
     }
     

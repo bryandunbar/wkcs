@@ -28,6 +28,11 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         
+        // Add Dummy Step for Leaderboard
+        var leaderBoardStep = Step(idx: Constants.LEADERBOARD_STEP_IDX, viewControllerIdentifier: "LeaderboardViewController")
+        leaderBoardStep.menuTitle = "Leaderboard"
+        tempMenuItems.append(leaderBoardStep)
+        
         return tempMenuItems
     }()
     
