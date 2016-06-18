@@ -13,5 +13,10 @@ struct Constants {
     static let LEADERBOARD_STEP_IDX = -1
     
     /** API **/
-    static let API_ENDPOINT = "http://localhost:8080/api/v1/"
+    #if DEBUG
+    //static let API_ENDPOINT = "http://localhost:8080/api/v1/"
+    static let API_ENDPOINT = "https://whokilledcustomerservice.herokuapp.com/api/v1/"
+    #else
+    static let API_ENDPOINT = "https://whokilledcustomerservice.herokuapp.com/api/v1/"
+    #endif
 }

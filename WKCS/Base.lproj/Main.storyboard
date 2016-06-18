@@ -42,7 +42,7 @@
                             <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OXv-2r-Ogf">
                                 <rect key="frame" x="202" y="698" width="289" height="58"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go" secureTextEntry="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9za-FL-mwK"/>
                                 </connections>
@@ -54,6 +54,7 @@
                                 <state key="normal" title="LOGIN as an associate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" title=" "/>
                                 <connections>
                                     <action selector="loginAsAssociateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l4J-em-qgS"/>
                                 </connections>
@@ -87,10 +88,17 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" title=" "/>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oht-K6-B8v"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="XHe-0q-nEJ">
+                                <rect key="frame" x="543" y="642" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oxv-Ag-e46">
+                                <rect key="frame" x="388" y="824" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,8 +113,12 @@
                     <navigationItem key="navigationItem" id="nxe-ob-JLR"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="XHe-0q-nEJ" id="VQ0-jj-6h1"/>
+                        <outlet property="activityIndicatorAssociate" destination="oxv-Ag-e46" id="BXp-27-nf3"/>
                         <outlet property="backgroundView" destination="8bC-Xf-vdC" id="DQe-oB-UUK"/>
                         <outlet property="eventId" destination="0hR-aS-ABF" id="6hp-6N-rRV"/>
+                        <outlet property="loginAssociateButton" destination="1iv-kW-064" id="E8g-Sz-dpD"/>
+                        <outlet property="loginButton" destination="qlu-Sm-ET2" id="WQN-h1-lCO"/>
                         <outlet property="password" destination="OXv-2r-Ogf" id="tN7-5O-rLN"/>
                         <outlet property="storeID" destination="m7f-Lo-esn" id="sdU-Gb-yYi"/>
                     </connections>
@@ -648,6 +660,7 @@ Then click "Proceed"</string>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled" title=" "/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y4c-pD-OFU">
                                 <rect key="frame" x="28" y="514" width="712" height="353"/>
@@ -828,6 +841,9 @@ Then click "Proceed"</string>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="23"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Xxu-to-iks">
+                                <rect key="frame" x="366" y="901" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -836,6 +852,7 @@ Then click "Proceed"</string>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="Xxu-to-iks" id="K1m-Vz-GWf"/>
                         <outlet property="backgroundView" destination="4Op-TB-Dug" id="DIc-uR-IVo"/>
                         <outlet property="submitButton" destination="vcS-qh-RAU" id="2t9-3r-6af"/>
                         <outlet property="subtitle2Label" destination="4n8-6e-Eeo" id="QKG-Sc-0hV"/>
@@ -859,15 +876,9 @@ Then click "Proceed"</string>
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue_key" translatesAutoresizingMaskIntoConstraints="NO" id="N9i-Gz-hZ8">
-                                <rect key="frame" x="153" y="150" width="417" height="187"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trophy" translatesAutoresizingMaskIntoConstraints="NO" id="N9i-Gz-hZ8">
+                                <rect key="frame" x="165" y="84" width="439" height="197"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEADERBOARD" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWj-JS-CUW" userLabel="label1">
-                                <rect key="frame" x="172" y="270" width="549" height="75"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
-                                <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qHO-Jx-iYB">
                                 <rect key="frame" x="28" y="454" width="712" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -904,6 +915,12 @@ Then click "Proceed"</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LEADERBOARD" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWj-JS-CUW" userLabel="label1">
+                                <rect key="frame" x="110" y="270" width="549" height="75"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <color key="textColor" cyan="0.5" magenta="0.20000000000000001" yellow="0.050000000000000003" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <userDefinedRuntimeAttributes>
@@ -928,5 +945,6 @@ Then click "Proceed"</string>
         <image name="mustache" width="1800" height="1800"/>
         <image name="telephone booth" width="1800" height="1800"/>
         <image name="thumbprint" width="2973" height="2973"/>
+        <image name="trophy" width="431" height="470"/>
     </resources>
 </document>

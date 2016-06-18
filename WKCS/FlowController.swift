@@ -149,9 +149,8 @@ class FlowController : NSObject {
                         }
                         
                         if let themeColor = dict["themeColor"] as? String {
-                            let comps = themeColor.componentsSeparatedByString(",").map { CGFloat(($0 as NSString).floatValue) / 100.0 }
-                            let (r, g, b) = CMYKtoRGB(comps[0], m: comps[1], y: comps[2], k: comps[3])
-                            step.themeColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+                            let comps = themeColor.componentsSeparatedByString(",").map { CGFloat(($0 as NSString).floatValue) / 255.0 }
+                            step.themeColor = UIColor(red: comps[0], green: comps[1], blue: comps[2], alpha: 1.0)
                         }
 
                         if let imageName = dict["imageName"] as? String {

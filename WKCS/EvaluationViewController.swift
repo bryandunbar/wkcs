@@ -15,6 +15,7 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
     @IBOutlet weak var submitButton: UIShadowedButton!
     var responseData:EvaluationResponseData!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,18 +63,24 @@ class EvaluationViewController: ScenarioExplanationViewController, UITableViewDe
             "response_data":self.responseData.asDictionary()
         ]
         
+        activityIndicator.startAnimating()
+        nextButton?.enabled = false
         
         Alamofire.request(.POST, Constants.API_ENDPOINT + "postChallengeResult", parameters:params, encoding: .JSON)
             .validate()
             .responseJSON { response in
                 debugPrint(response)
                 
+                self.activityIndicator.stopAnimating()
+                self.nextButton?.enabled = true
                 if let JSON = response.result.value {
+                    self.nextButton?.setTitle("Score Submitted!", forState: .Normal)
                     let status = JSON["status"] as! Bool
                     if status {
                         super.next(sender) // Let the super class move us on
                     } else {
                         self.showError(JSON["error"] as! String, handler: nil)
+                        
                     }
                 }
                 

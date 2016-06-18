@@ -21,6 +21,11 @@ struct LoginData {
 
 class LoginViewController: BaseViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var loginAssociateButton: UIShadowedButton!
+    @IBOutlet weak var loginButton: UIShadowedButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+        @IBOutlet weak var activityIndicatorAssociate
+    : UIActivityIndicatorView!
     var keyboardShown:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +81,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         let loginData = extractLoginInfo()
         if validate(loginData, forSGM: true) {
             
+            loginAssociateButton.enabled = false
+            loginButton.enabled = false
+            activityIndicator.startAnimating()
             
             Alamofire.request(.POST, Constants.API_ENDPOINT + "login", parameters:loginData.asDictionary(), encoding: .JSON)
                 .validate()
@@ -93,6 +101,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
                             self.updateAppState(loginData.eventId!, location: location, isSGM: true)
                             self.next(sender)
                         } else {
+                            self.loginAssociateButton.enabled = true
+                            self.loginButton.enabled = true
+                            self.activityIndicator.stopAnimating()
                             self.showError(JSON["error"] as! String, handler: nil)
                         }
                     }
@@ -108,6 +119,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         let loginData = extractLoginInfo()
         if validate(loginData, forSGM: false) {
             
+            loginAssociateButton.enabled = false
+            loginButton.enabled = false
+            activityIndicatorAssociate.startAnimating()
             
             Alamofire.request(.POST, Constants.API_ENDPOINT + "validateEventId", parameters:loginData.asDictionary(), encoding: .JSON)
                 .validate()
@@ -124,6 +138,9 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
                             self.updateAppState(loginData.eventId!, location: location, isSGM: false)
                             self.next(sender)
                         } else {
+                            self.loginAssociateButton.enabled = true
+                            self.loginButton.enabled = true
+                            self.activityIndicatorAssociate.stopAnimating()
                             self.showError(JSON["error"] as! String, handler: nil)
                         }
                     }
